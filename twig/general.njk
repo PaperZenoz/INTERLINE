@@ -41,9 +41,9 @@
                     <h2 class="{{ _ }}__form-title">
                         Скачайте кп со скидкой
                     </h2>
-                    <div class="{{ _ }}__model">
-                        <span>Выберите модель</span>
-                    </div>
+                    {#                    <div class="{{ _ }}__model"> #}
+                    {#                        <span>Выберите модель</span> #}
+                    {#                    </div> #}
 
                     <input type="text" class="input" placeholder="Телефон">
                     <input type="text" class="input" placeholder="Email">
@@ -61,11 +61,218 @@
 
                 {% for item in list %}
                     <div class="{{ _ }}__type">
-                        <div class="{{_}}__type-img img img--contain">
+                        <div class="{{ _ }}__type-img img img--contain">
                             <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
                         </div>
                         <div>{{ item }}</div>
                     </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% set  _ = 'general-information' %}
+    <div class="{{ _ }} section">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                <div class="{{ _ }}__item">
+                    <strong>Продажа</strong>
+                    <div class="{{ _ }}__num">
+                        2000
+                    </div>
+                    <span>
+                        Более 2000 единиц техники в год
+                    </span>
+                </div>
+
+                <div class="{{ _ }}__item">
+                    <strong>В наличии</strong>
+                    <div class="{{ _ }}__num">
+                        300
+                    </div>
+                    <span>
+                        Более 300 единиц техники на площадках
+                    </span>
+                </div>
+
+                <div class="{{ _ }}__item">
+                    <strong>ПРЕДСТАВИТЕЛЬСТВА</strong>
+                    <div class="{{ _ }}__num">
+                        5
+                    </div>
+                    <span>
+                        В 5 городах России.
+                    </span>
+                </div>
+
+                <div class="{{ _ }}__item">
+                    <strong>ЗАПЧАСТИ</strong>
+                    <div class="{{ _ }}__num">
+                        5000
+                    </div>
+                    <span>
+                        Более 5000 наименований
+                    </span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    {% set  _ = 'general-category' %}
+    <div class="{{ _ }} section">
+        <div class="container-lg">
+            <div class="section-head">
+                <h2 class="h2 h2--underline">
+                    Категории техники
+                </h2>
+                <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+            </div>
+
+            <div class="{{ _ }}__wrap">
+                <div class="{{ _ }}__left">
+                    <div class="{{ _ }}__nav">
+                        {% set  list = [
+                            'Самосвалы',
+                            'Тягачи',
+                            'Автобетоносмесители',
+                            'Автобусы',
+                            'Катки'] %}
+
+                        {% for item in list %}
+                            <a class="{{ _ }}__nav-item">
+                                <div class="{{ _ }}__nav-icon">
+
+                                </div>
+                                <div class="{{ _ }}__nav-text">
+                                    {{ item }}
+                                </div>
+                            </a>
+                        {% endfor %}
+
+                    </div>
+                    <form class="{{ _ }}__form">
+                        <h3 class="h3">Консультация</h3>
+                        <input type="text" class="input" placeholder="Введите номер телефона">
+                        <a href="#" class="btn">
+                            Оставить заявку
+                        </a>
+                    </form>
+                </div>
+                <div class="{{ _ }}__right">
+                    <div class="{{ _ }}__list">
+                        <div class="{{ _ }}__list-item">
+                            <div class="{{ _ }}__slider general-category-slider custom-slick-arrow custom-slick-dots">
+                                {% for i in range(1, 5) %}
+                                    <div class="{{ _ }}__item">
+                                        <h4 class="h4">ТЯГАЧ SHACMAN X 6000 4х2 480 л.с</h4>
+                                        <div class="{{ _ }}__sign">
+                                            FWGWHGBWHWH
+                                        </div>
+                                        <div class="{{ _ }}__img img">
+                                            <img src="images/{{ _ }}/1.jpg" alt=""/>
+                                            <div class="{{ _ }}__tooltip" title="Доп. информация">
+                                                <img src="images/{{ _ }}/1.svg" alt=""/>
+                                            </div>
+                                        </div>
+                                        <div class="{{ _ }}__content">
+                                            <div class="{{ _ }}__content-item">
+                                                <strong>Год выпуска: </strong><span>2023</span>
+                                            </div>
+                                            <div class="{{ _ }}__content-item">
+                                                <strong>Топливный бак, л: </strong><span>1480</span>
+                                            </div>
+                                            <div class="{{ _ }}__content-item">
+                                                <strong>Состояние техники: </strong><span>Новое</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="{{ _ }}__item-buttons">
+                                            <a href="#" class="btn btn--red">УЗНАТЬ СТОИМОСТЬ</a>
+                                            <a href="#" class="btn">ПОДРОБНЕЕ</a>
+
+                                        </div>
+
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+
+                            <div class="{{ _ }}__button">
+                                <a href="#" class="special-btn">ПЕРЕЙТИ В КАТАЛОГ</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% set  _ = 'general-leasing' %}
+    <div class="{{ _ }} section">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                <div class="{{ _ }}__title">
+                    ВЫГОДНЫЙ ЛИЗИНГ
+                </div>
+                <div class="{{ _ }}__list">
+                    {% set  list = [
+                        'Первоначальный взнос 0 %',
+                        'Одобрение за 5 минут'] %}
+
+                    {% for item in list %}
+                        <div class="{{ _ }}__item">
+                            <div class="{{ _ }}__item-icon">
+                                <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
+                            </div>
+                            <div class="{{ _ }}__item-text">
+                                {{ item }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <a href="#" class="special-btn">УЗНАТЬ УСЛОВИЯ</a>
+            </div>
+        </div>
+    </div>
+
+
+    {% set  _ = 'general-top' %}
+    <div class="{{ _ }} section">
+        <div class="container-lg">
+            <h2 class="h2 h2--underline">Топ продаж</h2>
+            <div class="{{ _ }}__wrap general-top-slider custom-slick-arrow custom-slick-dots">
+                {% for i in range(1, 3) %}
+                    <div>
+                        <div class="{{ _ }}__item">
+                            <div class="{{ _ }}__column">
+                                {% for i in range(1, 3) %}
+                                    <div class="{{ _ }}__info">
+                                        Описание грузовика и его преимуществ в две или три строки, этот текст может меняться
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="{{ _ }}__column">
+                                <div class="{{ _ }}__title">
+                                    Тягач SHACMAN (4х2) X6000
+                                </div>
+                                <div class="{{ _ }}__img">
+                                    <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                                </div>
+                            </div>
+                            <div class="{{ _ }}__column">
+                                {% for i in range(1, 3) %}
+                                    <div class="{{ _ }}__info">
+                                        Описание грузовика и его преимуществ в две или три строки, этот текст может меняться
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="{{ _ }}__bg-title">SHACMAN X6000</div>
+                        </div>
+                    </div>
+
                 {% endfor %}
             </div>
         </div>

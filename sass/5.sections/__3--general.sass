@@ -58,8 +58,8 @@
 
   &__model
     margin-bottom: 40px
-    
-    
+
+
   &__types
     display: flex
     justify-content: space-between
@@ -80,3 +80,247 @@
     height: 160px
     margin-bottom: 20px
 
+.general-information
+  background-color: $black
+
+  &__wrap
+    @extend %fb
+    gap: 50px
+
+  &__item
+    color: $white
+    width: 225px
+
+    strong
+      @extend %up
+      font-size: 18px
+      @extend %500
+
+    span
+      font-size: 16px
+
+  &__num
+    @extend %800
+    font-size: 65px
+    color: $red
+
+.general-category
+  &__wrap
+    display: grid
+    grid-template-columns: 430px auto
+    grid-gap: 75px
+
+  &__nav
+    margin-bottom: 50px
+
+  &__nav-item
+    height: 115px
+    @extend %fy
+    padding: 20px
+    background-color: $gray-light
+    @include r(5px)
+    @extend %transition
+    cursor: pointer
+
+    &:hover
+      color: $white
+      background-color: $black
+
+      .general-category__nav-icon
+        background-color: $red
+
+  &__nav-icon
+    width: 71px
+    height: 71px
+    @extend %fc
+    background-color: $gray
+    margin-right: 20px
+    @extend %transition
+
+  &__form
+    padding: 50px 25px
+    background-color: $gray-light
+
+    .input
+      height: 100px
+      line-height: 100px
+      background-color: $gray
+      margin-bottom: 30px
+
+    .btn
+      height: 120px
+      line-height: 120px
+      width: 100%
+
+  &__list
+
+  &__list-item
+
+  &__item
+    padding: 30px
+    @include r(10px)
+    background-color: $gray-light
+    max-width: 650px
+    margin: 0 15px
+
+  &__sign
+    font-size: 14px
+    display: block
+    margin-bottom: 10px
+
+  &__item-buttons
+    display: flex
+    gap: 15px
+
+    .btn
+      height: 83px
+      line-height: 83px
+      min-width: 285px
+
+  &__img
+    height: 360px
+    @include r(10px)
+    overflow: hidden
+    position: relative
+    margin-bottom: 25px
+
+    img
+      @extend %transition
+      filter: grayscale(100%)
+
+    &:hover img
+      filter: grayscale(0)
+
+  &__tooltip
+    position: absolute
+    right: 15px
+    top: 15px
+    background-color: $white
+    z-index: 2
+    width: 28px
+    height: 28px
+    @include r(50%)
+
+  &__content
+    margin-bottom: 30px
+
+  &__content-item
+    display: flex
+    align-items: center
+    gap: 5px
+    margin-bottom: 15px
+    @extend %lc
+
+  &__slider
+    margin-bottom: 190px
+
+  &__button
+    @extend %fx
+
+    .special-btn
+      width: 525px
+      height: 123px
+      line-height: 123px
+
+      &:after
+        background-color: $black
+        width: 68px
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.38123 2.91633C8.11199 3.16269 7.96074 3.48585 7.96074 3.81475C7.96074 4.14366 8.11199 4.45138 8.38123 4.67024L15.4904 10.4473L8.38123 16.9501C8.11962 17.1974 7.97486 17.5181 7.97813 17.8431C7.9814 18.1682 8.13245 18.4716 8.39873 18.688C8.66501 18.9043 9.02522 19.0164 9.40179 19C9.77835 18.9836 10.1411 18.8401 10.412 18.6003L18.5365 11.1687C18.8058 10.9224 18.957 10.5992 18.957 10.2703C18.957 9.94138 18.8058 9.63366 18.5365 9.4148L10.412 2.81267C10.1427 2.59388 9.77745 2.48189 9.39662 2.50133C9.01579 2.52077 8.65056 2.67005 8.38123 2.91633Z' fill='white' /%3E%3C/svg%3E")
+
+.general-category-slider
+  width: 1315px
+
+.general-leasing
+  background-image: url("../../images/general-leasing/1.jpg")
+  background-size: cover
+  color: $white
+
+  &__title
+    font-size: 50px
+    @extend %up
+    @extend %700
+    margin-bottom: 60px
+
+  &__list
+    margin-bottom: 60px
+
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    @extend %lc
+
+  &__item-icon
+    width: 65px
+    margin-right: 5px
+
+  .special-btn
+    width: 440px
+
+    &:after
+      width: 53px
+
+.general-top
+
+  &__bg-title
+    color: $gray-light
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    text-align: center
+    font-size: 180px
+    z-index: -1
+  &__wrap
+    margin-top: 50px
+    margin-bottom: 200px
+
+
+  &__column
+    height: 570px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    &:nth-child(1), &:nth-child(3)
+      z-index: 1
+
+  &__item
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    box-shadow: 0 4px 20px 0 rgba(167, 167, 167, 0.25)
+    padding: 45px 70px
+    position: relative
+    margin: 10px
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      background-image: url("data:image/svg+xml,%3Csvg width='694' height='545' viewBox='0 0 694 545' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_2005_13)'%3E%3Ccircle cx='193' cy='136' r='14' fill='%231E1E1E'/%3E%3C/g%3E%3Ccircle cx='193' cy='136' r='5' fill='%23D11E25'/%3E%3Cline x1='174.719' y1='125.414' x2='0.719361' y2='7.41381' stroke='%23365989' stroke-dasharray='2 2'/%3E%3Cg filter='url(%23filter1_d_2005_13)'%3E%3Ccircle cx='14' cy='14' r='14' transform='matrix(-1 0 0 1 471 103)' fill='%231E1E1E'/%3E%3C/g%3E%3Ccircle cx='5' cy='5' r='5' transform='matrix(-1 0 0 1 462 112)' fill='%23D11E25'/%3E%3Cline x1='473.79' y1='102.546' x2='693.79' y2='0.546382' stroke='%23365989' stroke-dasharray='2 2'/%3E%3Cg filter='url(%23filter2_d_2005_13)'%3E%3Ccircle cx='14' cy='14' r='14' transform='matrix(-1 0 0 1 495 278)' fill='%231E1E1E'/%3E%3C/g%3E%3Cg filter='url(%23filter3_d_2005_13)'%3E%3Ccircle cx='14' cy='14' r='14' transform='matrix(-1 0 0 1 509 366)' fill='%231E1E1E'/%3E%3C/g%3E%3Ccircle cx='5' cy='5' r='5' transform='matrix(-1 0 0 1 486 287)' fill='%23D11E25'/%3E%3Ccircle cx='5' cy='5' r='5' transform='matrix(-1 0 0 1 500 375)' fill='%23D11E25'/%3E%3Cline x1='499.887' y1='282.513' x2='693.887' y2='237.513' stroke='%23365989' stroke-dasharray='2 2'/%3E%3Cpath d='M506.5 393.5L690.5 489' stroke='%23365989' stroke-dasharray='2 2'/%3E%3Cg filter='url(%23filter4_d_2005_13)'%3E%3Ccircle cx='241' cy='273' r='14' fill='%231E1E1E'/%3E%3C/g%3E%3Cg filter='url(%23filter5_d_2005_13)'%3E%3Ccircle cx='260' cy='402' r='14' fill='%231E1E1E'/%3E%3C/g%3E%3Ccircle cx='241' cy='273' r='5' fill='%23D11E25'/%3E%3Ccircle cx='260' cy='402' r='5' fill='%23D11E25'/%3E%3Cline x1='219.924' y1='271.494' x2='4.92415' y2='238.494' stroke='%23365989' stroke-dasharray='2 2'/%3E%3Cline x1='241.148' y1='407.478' x2='5.14776' y2='480.478' stroke='%23365989' stroke-dasharray='2 2'/%3E%3Cdefs%3E%3Cfilter id='filter0_d_2005_13' x='159' y='106' width='68' height='68' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_2005_13'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_2005_13' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter1_d_2005_13' x='423' y='87' width='68' height='68' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_2005_13'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_2005_13' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter2_d_2005_13' x='447' y='262' width='68' height='68' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_2005_13'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_2005_13' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter3_d_2005_13' x='461' y='350' width='68' height='68' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_2005_13'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_2005_13' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter4_d_2005_13' x='207' y='243' width='68' height='68' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_2005_13'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_2005_13' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter5_d_2005_13' x='226' y='372' width='68' height='68' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0 0.654167 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_2005_13'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_2005_13' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: right 500px top 85px
+      z-index: 1
+
+  &__info
+    box-shadow: 0 4px 20px 0 rgba(167, 167, 167, 0.25)
+    padding: 20px
+    font-size: 18px
+    grid-column-gap: 30px
+    background-color: $white
+
+  &__title
+    font-size: 25px
+    text-align: center
+    margin-top: 15px
+    margin-bottom: 50px
+
+  &__img
+    position: relative
+    bottom: -10px
+    text-align: center
+      

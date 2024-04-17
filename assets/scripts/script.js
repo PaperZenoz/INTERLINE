@@ -43,34 +43,14 @@ $(document).ready(function () {
 
 
     function sliders() {
-        $('.general-diary-slider').slick()
-        $('.general-banner-slider').slick({
-            arrows: false,
+        $('.general-category-slider').slick({
+            slidesToShow: 2,
             dots: true
         })
 
-        $('.general-reviews-slider').slick({
-            centerMode: true,
-            responsive: [
-                {
-                    breakpoint: 1920,
-                    settings: {
-                        centerMode: false
-                    }
-                }
-            ]
-        })
-
-
-        function love_slider() {
-            if ($(window).width() < 1024) {
-                $('.general-love__list').slick()
-            }
-        }
-
-        love_slider()
-        $(window).resize(function () {
-            love_slider()
+        $('.general-top-slider').slick({
+            slidesToShow: 1,
+            dots: true
         })
 
 

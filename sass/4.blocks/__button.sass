@@ -1,0 +1,63 @@
+.btn
+  height: 68px
+  min-width: 300px
+  width: max-content
+  border: 1px solid $transparent
+  line-height: 68px
+  text-align: center
+  display: inline-block
+  @extend %up
+  transition: all ease .3s
+  font-size: 16px
+  background: $black
+  color: $white
+  cursor: pointer
+  padding: 0 15px
+  border-radius: 5px
+
+  &--red
+    background-color: $red
+
+
+.special-btn
+  height: 98px
+  min-width: 290px
+  width: max-content
+  border: 1px solid $transparent
+  line-height: 98px
+  text-align: center
+  display: inline-block
+  @extend %up
+  @extend %transition
+  font-size: 18px
+  background-color: $red
+  color: $white
+  cursor: pointer
+  padding: 0px 38px 0px 15px
+  border-radius: 5px
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    width: 38px
+    background-color: $white
+    position: absolute
+    top: -1px
+    right: -2px
+    bottom: -1px
+    border-radius: 0px 5px 5px 0px
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_356_353)'%3E%3Cpath d='M4.77667 2.22838C4.62823 2.42344 4.54484 2.67933 4.54484 2.93976C4.54484 3.2002 4.62823 3.44386 4.77667 3.61716L8.69615 8.19153L4.77667 13.3406C4.63243 13.5364 4.55262 13.7904 4.55443 14.0478C4.55623 14.3051 4.63951 14.5454 4.78631 14.7167C4.93312 14.8881 5.13172 14.9768 5.33933 14.9638C5.54694 14.9508 5.74696 14.8372 5.89629 14.6473L10.3756 8.7628C10.524 8.56773 10.6074 8.31185 10.6074 8.05141C10.6074 7.79097 10.524 7.54732 10.3756 7.37401L5.8963 2.14629C5.74781 1.97305 5.54644 1.88438 5.33648 1.89977C5.12652 1.91516 4.92516 2.03336 4.77667 2.22838Z' fill='%231E1E1E' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_356_353'%3E%3Crect width='15.7147' height='12.703' rx='6.35152' transform='matrix(-3.04353e-08 1 -0.997323 0.0731176 13.2549 0)' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: center
+
+  &--second
+    background-color: $white
+    color: $black
+
+    &:after
+      background-color: $red
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_356_359)'%3E%3Cpath d='M4.77667 2.22838C4.62823 2.42344 4.54484 2.67933 4.54484 2.93976C4.54484 3.2002 4.62823 3.44386 4.77667 3.61716L8.69615 8.19153L4.77667 13.3406C4.63243 13.5364 4.55262 13.7904 4.55443 14.0478C4.55623 14.3051 4.63951 14.5454 4.78631 14.7167C4.93312 14.8881 5.13172 14.9768 5.33933 14.9638C5.54694 14.9508 5.74696 14.8372 5.89629 14.6473L10.3756 8.7628C10.524 8.56773 10.6074 8.31185 10.6074 8.05141C10.6074 7.79097 10.524 7.54732 10.3756 7.37401L5.8963 2.14629C5.74781 1.97305 5.54644 1.88438 5.33648 1.89977C5.12652 1.91516 4.92516 2.03336 4.77667 2.22838Z' fill='white' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_356_359'%3E%3Crect width='15.7147' height='12.703' rx='6.35152' transform='matrix(-3.04353e-08 1 -0.997323 0.0731176 13.2549 0)' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+
+
+

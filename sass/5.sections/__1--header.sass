@@ -1,0 +1,58 @@
+.header
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+
+
+.header-top
+  background-color: $white
+
+  &__wrap
+    height: 120px
+    @extend %fy
+    justify-content: space-between
+
+  &__logo
+    display: flex
+    flex-direction: column
+
+  &__telephone
+    font-size: 30px
+
+  &__contacts
+    display: flex
+
+  &__contacts-general
+    display: flex
+    flex-direction: column
+    margin-right: 60px
+
+  &__contacts-mail
+    text-decoration: underline
+
+.header-nav
+  background-color: $black
+  color: $white
+
+  &__wrap
+    display: flex
+    @extend %fb
+    align-items: stretch
+    height: 75px
+
+  &__item
+    color: $white
+    @extend %fc
+    position: relative
+    width: 100%
+    &:before
+      content: ''
+      position: absolute
+      width: 2px
+      right: 0
+      height: 100%
+      background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 100%)
+
+
+      

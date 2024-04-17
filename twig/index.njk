@@ -1,0 +1,24 @@
+{% set page = { title: 'Ссылки' } %}
+{% extends "./2.parts/main.njk" %}
+{% block content %}
+
+
+    <div style="margin-top: 100px">
+        <div class="container">
+
+
+            {% set  list = [{
+                title: 'Главная',
+                subtitle: 'general'
+
+            }] %}
+            {% for item in list %}
+                <a href="{{ item.subtitle }}.html" class="btn"
+                   style="display: block; width: 100%; margin-bottom: 15px">{{ item.title }}</a>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+{% endblock content %}

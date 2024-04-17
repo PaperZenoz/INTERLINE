@@ -1,0 +1,76 @@
+{% set page = { title: 'Главная' } %}
+{% extends "./2.parts/main.njk" %}
+{% block content %}
+
+
+    {% set  _ = 'general-banner' %}
+    <div class="{{ _ }} section">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                <div class="{{ _ }}__content">
+                    <h1 class="h1">КИТАЙСКАЯ СПЕЦТЕХНИКА</h1>
+                    <div class="{{ _ }}__list">
+
+                        {% set  list = [
+                            'Прямые поставки из Китая',
+                            'Техническая поддержка',
+                            'Лизинг'] %}
+
+                        {% for item in list %}
+                            <div class="{{ _ }}__item">
+                                <div class="{{ _ }}__item-icon">
+                                    <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
+                                </div>
+                                <div class="{{ _ }}__item-text">
+                                    {{ item }}
+                                </div>
+                            </div>
+                        {% endfor %}
+
+
+                    </div>
+
+                    <div class="{{ _ }}__buttons">
+                        <a href="#" class="special-btn">УЗНАТЬ О СКИДКАХ</a>
+                        <a href="#" class="special-btn special-btn--second">ПЕРЕЙТИ В КАТАЛОГ</a>
+
+                    </div>
+
+                </div>
+                <div class="{{ _ }}__form">
+                    <h2 class="{{ _ }}__form-title">
+                        Скачайте кп со скидкой
+                    </h2>
+                    <div class="{{ _ }}__model">
+                        <span>Выберите модель</span>
+                    </div>
+
+                    <input type="text" class="input" placeholder="Телефон">
+                    <input type="text" class="input" placeholder="Email">
+                    <a href="#" class="btn" style="width: 100%">ПОЛУЧИТЬ СЕЙЧАС</a>
+
+                </div>
+
+            </div>
+            <div class="{{ _ }}__types">
+                {% set  list = [
+                    'САМОСВАЛЫ',
+                    'ТЯГАЧИ',
+                    'Автобетоносмесители',
+                    'Автобусы'] %}
+
+                {% for item in list %}
+                    <div class="{{ _ }}__type">
+                        <div class="{{_}}__type-img img img--contain">
+                            <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                        </div>
+                        <div>{{ item }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock content %}

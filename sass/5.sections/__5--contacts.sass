@@ -1,0 +1,80 @@
+.contacts
+  background-image: url("data:image/svg+xml,%3Csvg width='1699' height='483' viewBox='0 0 1699 483' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M43.2306 16.8349C37.6874 20.3159 34.4983 24.7978 32.0279 30.0163C19.6437 25.1439 5.23166 31.0238 11.4704 48.0918C16.6242 62.189 27.5511 81.0299 37.5459 92.2852C80.0215 140.108 98.9952 -18.1753 43.2306 16.8349Z' fill='%23F5D0FE'/%3E%3Cpath d='M1548.84 212.82C1551.09 206.031 1556.05 200.18 1562.39 196.867C1565.47 195.256 1569.84 194.499 1571.95 197.262C1573.32 199.061 1573.07 201.575 1572.68 203.801C1571.45 210.693 1569.39 217.438 1566.55 223.831C1569.54 219.068 1572.62 214.213 1576.96 210.643C1581.31 207.072 1587.24 204.943 1592.65 206.498C1594 214.14 1590.55 222.006 1585.36 227.776C1580.17 233.546 1573.38 237.599 1566.71 241.556C1564.43 242.913 1561.91 244.316 1559.29 243.957C1547.97 242.409 1546.31 220.486 1548.85 212.81L1548.84 212.82Z' fill='%23F5D0FE'/%3E%3Cpath d='M1588.44 451.096C1615.85 475.648 1674.2 440.839 1686.24 414.176C1706.06 370.295 1636.92 355.149 1615.66 388.687C1623.71 376.475 1610.03 352.661 1595.84 351.546C1581.08 350.388 1573.14 371.478 1570.08 382.534C1566.67 394.892 1565.58 408.798 1570.39 421.339C1574.71 432.609 1586.94 448.244 1588.44 451.096Z' fill='%23F5D0FE'/%3E%3C/svg%3E%0A")
+  background-repeat: no-repeat
+  background-position: center
+  @media screen and (max-width: 1023px)
+    background-image: url("data:image/svg+xml,%3Csvg width='379' height='692' viewBox='0 0 379 692' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M255.804 539.323C257.277 534.866 260.538 531.026 264.696 528.851C266.719 527.794 269.589 527.297 270.971 529.11C271.872 530.291 271.71 531.941 271.451 533.403C270.647 537.926 269.292 542.354 267.427 546.551C269.393 543.424 271.41 540.237 274.264 537.894C277.118 535.55 281.012 534.152 284.557 535.173C285.446 540.189 283.181 545.352 279.775 549.14C276.369 552.928 271.914 555.588 267.532 558.185C266.033 559.076 264.385 559.997 262.659 559.761C255.232 558.745 254.144 544.355 255.807 539.316L255.804 539.323Z' fill='%23F5D0FE' /%3E%3Cpath d='M306.2 671.581C324.191 687.697 362.498 664.848 370.4 647.346C383.406 618.542 338.025 608.6 324.067 630.615C329.351 622.599 320.374 606.967 311.058 606.235C301.37 605.475 296.157 619.319 294.15 626.576C291.908 634.688 291.197 643.816 294.354 652.048C297.191 659.446 305.215 669.708 306.2 671.581Z' fill='%23F5D0FE' /%3E%3Cpath d='M28.7343 11.1899C25.0499 13.5036 22.9301 16.4827 21.2881 19.9513C13.0567 16.7127 3.47735 20.6209 7.62409 31.9656C11.0497 41.3356 18.3125 53.8587 24.9558 61.3398C53.1883 93.1266 65.7996 -12.0805 28.7343 11.1899Z' fill='%23F5D0FE' /%3E%3C/svg%3E")
+  
+  	
+  
+  &__wrap
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    position: relative
+    @media screen and (max-width: 1919px)
+      flex-direction: column-reverse
+
+
+  &__info
+    color: $blue
+
+  &__general
+    font-size: 30px
+    @media screen and (max-width: 1023px)
+      font-size: 20px
+
+
+    a
+      color: $blue
+      @extend %600
+      margin-bottom: 40px
+      display: block
+
+  &__title
+    margin-bottom: 60px
+    @media screen and (max-width: 1919px)
+      position: absolute
+      top: 0
+
+
+  &__map
+    @include r(50px)
+    position: relative
+    width: max-content
+    @media screen and (max-width: 1919px)
+      margin-top: 100px
+      margin-bottom: 40px
+    @media screen and (max-width: 1023px)
+    	margin-top: 60px
+    
+    	
+    
+
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      background-color: $pink
+      @include r(50px)
+      transform: translate(15px, 15px)
+
+  &__sign
+    @extend %600
+    margin-bottom: 100px
+    @media screen and (max-width: 1023px)
+      margin-bottom: 50px
+
+
+  &__map-field
+    @include r(50px)
+    overflow: hidden
+    position: relative
+    @media screen and (max-width: 1023px)
+      iframe
+        width: 380px
+        height: 380px

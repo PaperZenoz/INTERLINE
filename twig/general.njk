@@ -118,7 +118,6 @@
             </div>
         </div>
     </div>
-
     {% set  _ = 'general-category' %}
     <div class="{{ _ }} section">
         <div class="container-lg">
@@ -126,7 +125,6 @@
                 <h2 class="h2 h2--underline">
                     Категории техники
                 </h2>
-                <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
             </div>
 
             <div class="{{ _ }}__wrap">
@@ -141,8 +139,9 @@
 
                         {% for item in list %}
                             <a class="{{ _ }}__nav-item">
-                                <div class="{{ _ }}__nav-icon">
-
+                                <div class="{{ _ }}__nav-icon img img--contain">
+                                    <img src="images/{{ _ }}/{{ loop.index }}1.png" alt=""/>
+                                    <img src="images/{{ _ }}/{{ loop.index }}2.png" alt=""/>
                                 </div>
                                 <div class="{{ _ }}__nav-text">
                                     {{ item }}
@@ -208,7 +207,6 @@
             </div>
         </div>
     </div>
-
     {% set  _ = 'general-leasing' %}
     <div class="{{ _ }} section">
         <div class="container">
@@ -237,8 +235,6 @@
             </div>
         </div>
     </div>
-
-
     {% set  _ = 'general-top' %}
     <div class="{{ _ }} section">
         <div class="container-lg">
@@ -250,7 +246,8 @@
                             <div class="{{ _ }}__column">
                                 {% for i in range(1, 3) %}
                                     <div class="{{ _ }}__info">
-                                        Описание грузовика и его преимуществ в две или три строки, этот текст может меняться
+                                        Описание грузовика и его преимуществ в две или три строки, этот текст может
+                                        меняться
                                     </div>
                                 {% endfor %}
                             </div>
@@ -258,14 +255,15 @@
                                 <div class="{{ _ }}__title">
                                     Тягач SHACMAN (4х2) X6000
                                 </div>
-                                <div class="{{ _ }}__img">
+                                <a href="#" class="{{ _ }}__img">
                                     <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
-                                </div>
+                                </a>
                             </div>
                             <div class="{{ _ }}__column">
                                 {% for i in range(1, 3) %}
                                     <div class="{{ _ }}__info">
-                                        Описание грузовика и его преимуществ в две или три строки, этот текст может меняться
+                                        Описание грузовика и его преимуществ в две или три строки, этот текст может
+                                        меняться
                                     </div>
                                 {% endfor %}
                             </div>
@@ -274,6 +272,189 @@
                     </div>
 
                 {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% set  _ = 'general-services' %}
+    <div class="{{ _ }} section">
+        <div class="container-lg">
+            <div class="{{ _ }}__wrap">
+                <h2 class="h2 h2--underline h2--underline-white">Сервис</h2>
+                <div class="{{ _ }}__list">
+                    {% set  list = [
+                        'Быстрый',
+                        'Профессиональный',
+                        'Гарантийный сервис'] %}
+
+                    {% for item in list %}
+                        <div class="{{ _ }}__item">
+                            <div class="{{ _ }}__item-icon">
+                                <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
+                            </div>
+                            <div class="{{ _ }}__item-text">
+                                {{ item }}
+                            </div>
+
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+                <a href="#" class="special-btn">ПОДРОБНЕЕ</a>
+            </div>
+        </div>
+    </div>
+    {% set  _ = 'general-company' %}
+    <div class="{{ _ }} section">
+        <div class="container-lg">
+            <h2 class="h2 h2--underline">Компания Интерлайн</h2>
+        </div>
+        <div class="{{ _ }}__wrap">
+            <div class="container">
+                <div class="{{ _ }}__content">
+                    <div class="{{ _ }}__text">
+                        Официальный дилер <a href="#">SHACMAN</a> и <a href="#">YUTONG</a> - китайских заводов
+                        производителей. Более 2000 единиц техники продали за 2023 г. По итогам 2023 года - II место по
+                        России по продажи техники
+                        <a href="#">SHACMAN</a>
+                        <br> .Более 300 единиц техники в наличии на наших площадках. 5 представительств по России:
+                        Санкт-Петербург / Самара/ Челябинск/ Екатеринбург/ Кемерово.Подбираем наиболее выгодные условия
+                        лизинга для каждого клиента.
+                    </div>
+                    <a href="#" class="btn btn--white">Подробнее</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    {% set  _ = 'general-news' %}
+    <div class="{{ _ }} section">
+        <div class="container-lg">
+            <div class="section-head">
+                <h2 class="h2 h2--underline">Новости</h2>
+                <a href="#">Все новости</a>
+            </div>
+
+            <div class="{{ _ }}__wrap">
+                <a href="#" class="{{ _ }}__banner img">
+                    <img src="images/{{ _ }}/1.jpg" alt=""/>
+                    <div class="{{ _ }}__sign">
+                        Новые поставки запчастей для Shacman
+                    </div>
+                </a>
+                <div class="{{ _ }}__list">
+                    {% for i in range(1, 2) %}
+                        <a href="#" class="{{ _ }}__item">
+                            <div class="{{ _ }}__img img">
+                                <img src="images/{{ _ }}/2.jpg" alt=""/>
+                            </div>
+                            <div class="{{ _ }}__text">
+                                <strong>Shacman x6000</strong>
+                                <p>Здесь будет пояснительный и небольшой текст о статье, чтобы привлечь внимание Здесь
+                                    будет пояснительный и небольшой текст о статье, чтобы привлечь внимание........</p>
+
+                            </div>
+
+                        </a>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% set  _ = 'general-manager' %}
+    <div class="{{ _ }} section">
+        <div class="container-lg">
+            <h2 class="h2 h2--underline">Задайте вопрос менеджеру</h2>
+            <div class="{{ _ }}__wrap">
+                <div class="{{ _ }}__information">
+                    <div class="{{ _ }}__general">
+                        <div class="{{ _ }}__img img">
+                            <img src="images/{{ _ }}/1.jpg" alt=""/>
+                        </div>
+                        <div class="{{ _ }}__general-information">
+                            <div class="{{ _ }}__online">
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="7" cy="6" rx="7" ry="6" fill="#00D53C"/>
+                                </svg>
+                                Online
+                            </div>
+                            <div class="{{ _ }}__name">
+                                Иван Иванов
+                            </div>
+                            <div class="{{ _ }}__post">
+                                Менеджер отдела продаж
+                            </div>
+                            <a href="#" class="btn">СВЯЗАТЬСЯ</a>
+
+                        </div>
+
+                    </div>
+                    <div class="{{ _ }}__contacts">
+                        <h3 class="h3">Контакты</h3>
+
+
+                        <div class="{{ _ }}__item">
+                            <div class="{{ _ }}__item-icon">
+                                <img src="images/{{ _ }}/1.svg" alt=""/>
+                            </div>
+                            <div class="{{ _ }}__item-text">
+                                <a href="#"> info@specmachin.ru</a>
+
+                            </div>
+                        </div>
+                        <div class="{{ _ }}__item">
+                            <div class="{{ _ }}__item-icon">
+                                <img src="images/{{ _ }}/2.svg" alt=""/>
+                            </div>
+                            <div class="{{ _ }}__item-text">
+                                Новосибирск ул. Фрунзе, 80 офис 417
+                            </div>
+                        </div>
+                        <div class="{{ _ }}__item">
+                            <div class="{{ _ }}__item-icon">
+                                <img src="images/{{ _ }}/3.svg" alt=""/>
+                            </div>
+                            <div class="{{ _ }}__item-text">
+                                <a href="#"> 8-800-700-65-55</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <form href="#" class="{{ _ }}__form">
+                    <input type="text" class="input" placeholder="Имя">
+                    <input type="text" class="input" placeholder="Телефон">
+                    <textarea class="textarea" placeholder="Задайте вопрос"></textarea>
+                    <button class="btn btn--red"> Задать вопрос</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% set  _ = 'general-brands' %}
+    <div class="{{ _ }} section">
+        <div class="container-lg">
+            <h2 class="h2 h2--underline">Бренды</h2>
+            <div class="{{ _ }}__wrap">
+                <div class="{{ _ }}__text">
+                    Предлагаем вам широкий ассортимент продукции, который в совокупности с нашими услугами поможет
+                    повысить эффективность вашего бизнеса, автоматизировать бизнес- процессы и защитит
+                    <br> вас от киберпреступников.
+
+                </div>
+                <div class="{{ _ }}__list">
+                    {% for i in range(1, 3) %}
+                        <div class="{{ _ }}__item">
+                            <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

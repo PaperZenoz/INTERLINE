@@ -1,7 +1,6 @@
 .ol
   list-style-type: none
   counter-reset: num
-  margin-bottom: 50px
 
   @media screen and (max-width: 1919px)
     margin-bottom: 45px
@@ -35,3 +34,15 @@
     @media screen and (max-width: 767px)
       width: 25px
       height: 30px
+
+
+.ol--second
+  position: relative
+  li::before
+    content: counter(num)
+    position: absolute
+    left: 15px
+    top: 15px
+    font-size: 60px
+    @extend %700
+    color: $gray-light

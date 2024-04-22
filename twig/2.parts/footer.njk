@@ -1,3 +1,55 @@
+{% set  _ = 'footer' %}
+<footer class="{{ _ }}">
+    <div class="container">
+        <div class="{{ _ }}__wrap">
+            <div class="{{ _ }}__catalog">
+                <div class="{{ _ }}__title">
+                    Каталог
+                </div>
+                <div class="{{ _ }}__nav">
+                    {% for i in range(1, 5) %}
+                        <a href="#" class="{{ _ }}__item">
+                            Категория {{ loop.index }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="{{ _ }}__company">
+                <div class="{{ _ }}__title">
+                    КОМПАНИЯ
+                </div>
+                <div class="{{ _ }}__nav">
+                    {% set  list = [
+                        'О компании',
+                        'Лизинг',
+                        'Доставка',
+                        'Гарантии',
+                        'Контакты'] %}
+
+                    {% for item in list %}
+                        <a href="#" class="{{ _ }}__item">
+                            {{ item }}
+                        </a>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="{{_}}__bottom">
+                <div>©️ 2024 Все права защищены.</div>
+                <div>Соглашение на обработку <a href="#">персональных данных</a></div>
+                <div><a href="#">info@specmachin.ru</a> электронная почта для обращений с вопросом о своих персональных данных, в том числе об их удалении.</div>
+            </div>
+            
+            <div class="{{_}}__info">
+                Размещенные на этом сайте фотографии являются нашей интеллектуальной собственностью, копирование их на других сайтах
+                или в рекламных материалах без согласования с отделом маркетинга компании "ИнтерЛайн" запрещено.
+                Продвижение сайта компания Elmark
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 <div id="preloader">
     <div class="preloader"></div>
 </div>

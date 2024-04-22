@@ -6,41 +6,6 @@ $(window).on("load", function () {
 
 
 $(document).ready(function () {
-    function questions() {
-        $('.questions__head').on('click', function () {
-            $(this).toggleClass('open')
-            $(this).siblings('.questions__body').slideToggle()
-
-        })
-    }
-
-    function love_contacts() {
-        var $contacts = $('.general-love__contacts'),
-            $open = $contacts.find('.button-open'),
-            $close = $contacts.find('.button-close')
-
-        $open.on('click', function (e) {
-            e.preventDefault()
-            $contacts.addClass('open')
-        })
-
-        $close.on('click', function (e) {
-            e.preventDefault()
-            $contacts.removeClass('open')
-        })
-    }
-
-    function header() {
-        var $header = $('.header')
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 0) {
-                $header.addClass('fixed')
-            } else {
-                $header.removeClass('fixed')
-            }
-        });
-    }
-
 
     function sliders() {
         $('.general-category-slider').slick({
@@ -52,6 +17,30 @@ $(document).ready(function () {
             slidesToShow: 1,
             dots: true
         })
+
+
+        $('.product-card-slider').slick({
+            slidesToShow: 3,
+            dots: false
+        })
+
+
+        $('.product-analogue__slider').slick({
+            slidesToShow: 3,
+            dots: false
+        })
+
+        $('.general-top-slider').on('afterChange', function(currentSlide) {
+           $('.general-top__column').addClass('active')
+           $('.general-top__item').addClass('active')
+        });
+
+        $('.general-top-slider').on('beforeChange', function(currentSlide) {
+            $('.general-top__column').removeClass('active')
+            $('.general-top__item').removeClass('active')
+        });
+
+
 
 
     }
@@ -74,10 +63,7 @@ $(document).ready(function () {
     }
 
 
-    questions()
     sliders()
-    header()
     up_btn()
-    love_contacts()
 
 })

@@ -6,24 +6,19 @@
   &:before
     content: ''
     display: block
-    width: 120px
-    height: 120px
+    width: 180px
+    height: 180px
     @include r(50%)
-    background-color: rgba($white, 0.5)
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20.0853V11.6907C0 1.30304 7.83654 -2.9849 17.4071 2.20887L25.1149 6.37597L32.8221 10.5432C42.3926 15.737 42.3926 24.2524 32.8221 29.4461L25.1149 33.6132L17.4071 37.7803C7.83654 42.9741 0 38.7466 0 28.2987V20.0853Z' fill='%23F5F3FF'/%3E%3C/svg%3E%0A")
+    background-image: url("data:image/svg+xml,%3Csvg width='179' height='179' viewBox='0 0 179 179' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_i_492_56)'%3E%3Ccircle cx='90' cy='88' r='55' fill='%23D11E25'/%3E%3C/g%3E%3Ccircle opacity='0.5' cx='90' cy='89' r='69.5' stroke='%23D11E25'/%3E%3Ccircle opacity='0.5' cx='89.5' cy='89.5' r='89' stroke='%23D11E25'/%3E%3Cpath d='M96.8757 87.4999L84.584 97.7083L84.584 77.2916L96.8757 87.4999Z' fill='white'/%3E%3Cdefs%3E%3Cfilter id='filter0_i_492_56' x='35' y='33' width='110' height='114' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow_492_56'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A")
     background-position: center
     background-repeat: no-repeat
     position: absolute
     top: 50%
     left: 50%
-    transform: translate(-50%, -50%)
+    translate: -50% -50%
     z-index: 10
 
     @extend %transition
-
-  &:hover:before
-    background-color: $pink
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20.0853V11.6907C0 1.30304 7.83654 -2.9849 17.4071 2.20887L25.1149 6.37596L32.8221 10.5432C42.3926 15.737 42.3926 24.2524 32.8221 29.4461L25.1149 33.6132L17.4071 37.7803C7.83654 42.9741 0 38.7466 0 28.2987V20.0853Z' fill='%23FDE68A'/%3E%3C/svg%3E%0A")
 
 
 

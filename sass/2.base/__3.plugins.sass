@@ -12,7 +12,8 @@
     background-repeat: no-repeat
     background-position: center
     @extend %transition
-    cursor: pointer 
+    cursor: pointer
+    translate: 0 -50%
 
     &:hover
       background-color: $red
@@ -23,9 +24,17 @@
     @include r(5px)
 
   .slick-prev
-    transform: rotate(180deg)
+    rotate: 180deg
     left: -30px
     @include r(5px)
+
+.custom-slick-arrow--2
+  .slick-arrow
+    background-color: $transparent !important
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='20' viewBox='0 0 19 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.2848 2.045C6.06218 2.27941 5.93712 2.59729 5.93712 2.92875C5.93712 3.2602 6.06218 3.57809 6.2848 3.8125L12.1629 10L6.2848 16.1875C6.06849 16.4233 5.94879 16.739 5.9515 17.0668C5.95421 17.3945 6.07909 17.708 6.29927 17.9398C6.51944 18.1715 6.81728 18.303 7.12864 18.3058C7.44 18.3087 7.73996 18.1827 7.96392 17.955L14.6816 10.8837C14.9042 10.6493 15.0293 10.3315 15.0293 10C15.0293 9.66854 14.9042 9.35066 14.6816 9.11625L7.96393 2.045C7.74124 1.81066 7.43925 1.67902 7.12436 1.67902C6.80948 1.67902 6.50749 1.81066 6.2848 2.045Z' fill='%231E1E1E'/%3E%3C/svg%3E%0A")
+
+
+
 
 
 .custom-slick-dots
@@ -71,5 +80,5 @@
     height: 30px
     background-size: contain
   
-  	
-  
+
+

@@ -291,6 +291,10 @@
     flex-direction: column
     justify-content: space-between
     z-index: 1
+    @extend %transition
+    opacity: 0
+    &.active
+      opacity: 1
 
     &:nth-child(1), &:nth-child(3)
       z-index: 3
@@ -317,6 +321,11 @@
       background-position: right 500px top 85px
       z-index: 2
       pointer-events: none
+      opacity: 0
+
+    &.active:before
+
+      opacity: 1
 
   &__info
     box-shadow: 0 4px 20px 0 rgba(167, 167, 167, 0.25)

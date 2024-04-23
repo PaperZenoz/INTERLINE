@@ -1,0 +1,30 @@
+.catalog-general
+  &__wrap
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 50px 25px
+    margin-top: 100px
+
+  &__item
+    padding: 40px
+    @include r(10px)
+    height: 500px
+    background-color: $gray-light
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+
+    .h4
+      margin-bottom: 50px
+      @extend %up
+
+    .btn
+      height: 72px
+      line-height: 72px
+
+
+  &__item-last
+    background-color: $black
+    color: white
+

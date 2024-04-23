@@ -44,7 +44,6 @@ $(document).ready(function () {
 
 
     }
-
     function up_btn() {
         var $up_btn = $('.up-btn')
 
@@ -62,8 +61,25 @@ $(document).ready(function () {
         });
     }
 
+    function selects() {
+        new SlimSelect({
+            select: '#selectElement',
+            settings:{
+                showSearch: false
+            }
+        })
+
+        new SlimSelect({
+            select: '#selectElement2',
+            settings:{
+                showSearch: false
+            }
+        })
+    }
+
 
     sliders()
     up_btn()
+    selects()
 
 })

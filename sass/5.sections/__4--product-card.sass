@@ -34,16 +34,9 @@
 
   &__available
     @extend %up
-    height: 61px
-    line-height: 61px
-    color: white
-    min-width: 152px
-    width: max-content
-    background-color: $green
-    @include r(5px)
+    color: $green
     font-size: 14px
-    text-align: center
-    margin-bottom: 35px
+    margin-bottom: 60px
 
   &__content .h4
     @extend %up
@@ -70,6 +63,7 @@
     background-color: $red
     margin-left: 25px
     border: 1px solid $gray
+    cursor: pointer
 
   &__color:checked
     + div
@@ -120,13 +114,26 @@
     span
       font-size: 18px !important
 
-
 .product-characteristic
-  &__wrap
+  &__wrap-first
     display: grid
-    grid-template-columns: repeat(2, 1fr)
-    grid-gap: 30px 220px
+    grid-template-columns: 980px auto
+    grid-gap: 70px
     font-size: 16px
+    margin-bottom: 100px
+    p
+      margin-bottom: 25px
+    li
+      margin-bottom: 25px
+
+  &__wrap-second
+    display: grid
+    grid-template-columns: auto 980px
+    grid-gap: 70px
+    font-size: 16px
+
+  &__col
+    display: block
 
   &__col .h3
     font-size: 30px
@@ -135,7 +142,7 @@
   &__row
     border-bottom: 1px dotted #DADADA
     @extend %fb
-    margin-bottom: 12px
+    margin-bottom: 25px
     @extend %lc
 
 .product-video
@@ -215,7 +222,6 @@
 
   &__slider
     margin-top: 80px
-
 
 .card
   padding: 30px

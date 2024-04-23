@@ -10,6 +10,16 @@
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 30px
     margin-bottom: 40px
+    position: relative
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    position: absolute
+    right: 0
+    bottom: 0
+    gap: 20px
+    translate: 200%
 
   &__content
     color: $white
@@ -128,9 +138,11 @@
 
       .general-category__nav-icon
         background-color: $red
+
         img
           &:first-child
             display: none
+
           &:nth-child(2)
             display: block
 
@@ -141,9 +153,11 @@
     background-color: $gray
     margin-right: 20px
     @extend %transition
+
     img
       &:first-child
         display: block
+
       &:nth-child(2)
         display: none
 
@@ -293,6 +307,7 @@
     z-index: 1
     @extend %transition
     opacity: 0
+
     &.active
       opacity: 1
 

@@ -132,19 +132,16 @@
     @extend %transition
     cursor: pointer
 
-    &:hover
+    &:hover, &.active
       color: $white
       background-color: $black
 
       .general-category__nav-icon
         background-color: $red
-
         img
-          &:first-child
-            display: none
+          filter: invert(100%)
 
-          &:nth-child(2)
-            display: block
+
 
   &__nav-icon
     width: 71px
@@ -153,13 +150,6 @@
     background-color: $gray
     margin-right: 20px
     @extend %transition
-
-    img
-      &:first-child
-        display: block
-
-      &:nth-child(2)
-        display: none
 
   &__form
     padding: 50px 25px

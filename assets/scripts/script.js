@@ -30,20 +30,19 @@ $(document).ready(function () {
             dots: false
         })
 
-        $('.general-top-slider').on('afterChange', function(currentSlide) {
-           $('.general-top__column').addClass('active')
-           $('.general-top__item').addClass('active')
+        $('.general-top-slider').on('afterChange', function (currentSlide) {
+            $('.general-top__column').addClass('active')
+            $('.general-top__item').addClass('active')
         });
 
-        $('.general-top-slider').on('beforeChange', function(currentSlide) {
+        $('.general-top-slider').on('beforeChange', function (currentSlide) {
             $('.general-top__column').removeClass('active')
             $('.general-top__item').removeClass('active')
         });
 
 
-
-
     }
+
     function up_btn() {
         var $up_btn = $('.up-btn')
 
@@ -64,16 +63,40 @@ $(document).ready(function () {
     function selects() {
         new SlimSelect({
             select: '#selectElement',
-            settings:{
+            settings: {
                 showSearch: false
             }
         })
 
         new SlimSelect({
             select: '#selectElement2',
-            settings:{
+            settings: {
                 showSearch: false
             }
+        })
+    }
+
+    function category() {
+        var $button = $('.general-category__nav-item'),
+            $block = $('.general-category__list-item')
+
+
+        setTimeout(function () {
+            $block.hide()
+            $block.eq(1).show()
+        }, 500)
+
+
+
+        $button.on('click', function () {
+            var $index = $(this).index()
+
+
+            $button.removeClass('active')
+            $(this).addClass('active')
+
+            $block.hide()
+            $block.eq($index).show()
         })
     }
 
@@ -81,5 +104,6 @@ $(document).ready(function () {
     sliders()
     up_btn()
     selects()
+    category()
 
 })

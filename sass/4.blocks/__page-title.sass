@@ -19,9 +19,8 @@
     display: block
     text-align: center
     width: 100%
-
-
-
+  @media screen and (max-width: 767px)
+    font-size: 20px
 
 
 .h2
@@ -29,8 +28,13 @@
   @extend %600
   font-size: 60px
   line-height: 1.2
+  @media screen and (max-width: 1023px)
+    font-size: 25px
+
+
   &--underline
     position: relative
+
     &:before
       content: ''
       width: 367px
@@ -41,23 +45,37 @@
       background-image: url("data:image/svg+xml,%3Csvg width='367' height='23' viewBox='0 0 367 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H367L359.011 10H0V0Z' fill='%23D11E25' /%3E%3Cpath d='M0 13H305L300.224 23H0V13Z' fill='%231E1E1E' /%3E%3C/svg%3E")
       background-repeat: no-repeat
       background-size: contain
+      @media screen and (max-width: 767px)
+        width: 173px
+        height: 17px
+        background-image: url("data:image/svg+xml,%3Csvg width='173' height='17' viewBox='0 0 173 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H173L169.234 7.20833H0V0Z' fill='%23D11E25'/%3E%3Cpath d='M0 9.37109H143.774L141.522 16.5794H0V9.37109Z' fill='%231E1E1E'/%3E%3C/svg%3E%0A")
+
+
 
   &--underline-white
     &:before
       background-image: url("data:image/svg+xml,%3Csvg width='367' height='23' viewBox='0 0 367 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H367L359.011 10H0V0Z' fill='%23D11E25' /%3E%3Cpath d='M0 13H305L300.224 23H0V13Z' fill='white' /%3E%3C/svg%3E")
 
 
-
-
 .h3
   font-size: 23px
   margin-bottom: 15px
   @extend %600
+  @media screen and (max-width: 767px)
+    font-size: 20px
+
+
+
 
 
 .h4
   font-size: 22px
   margin-bottom: 15px
+  @media screen and (max-width: 767px)
+    font-size: 16px
+  
+  	
+  
 
 
 .underline

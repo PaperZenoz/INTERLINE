@@ -10,12 +10,22 @@ $(document).ready(function () {
     function sliders() {
         $('.general-category-slider').slick({
             slidesToShow: 2,
-            dots: true
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1920,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
         })
+
 
         $('.general-top-slider').slick({
             slidesToShow: 1,
-            dots: true
+            dots: true,
+            asNavFor: '.general-top__advantage-list'
         })
 
 
@@ -30,15 +40,24 @@ $(document).ready(function () {
             dots: false
         })
 
-        $('.general-top-slider').on('afterChange', function (currentSlide) {
-            $('.general-top__column').addClass('active')
-            $('.general-top__item').addClass('active')
-        });
 
-        $('.general-top-slider').on('beforeChange', function (currentSlide) {
-            $('.general-top__column').removeClass('active')
-            $('.general-top__item').removeClass('active')
-        });
+        $('.general-top__advantage-list').slick({
+            swipe: false,
+            asNavFor: '.general-top-slider',
+            arrows: false
+
+
+        })
+
+        // $('.general-top-slider').on('afterChange', function (currentSlide) {
+        //     $('.general-top__column').addClass('active')
+        //     $('.general-top__item').addClass('active')
+        // });
+        //
+        // $('.general-top-slider').on('beforeChange', function (currentSlide) {
+        //     $('.general-top__column').removeClass('active')
+        //     $('.general-top__item').removeClass('active')
+        // });
 
 
     }
@@ -83,9 +102,8 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $block.hide()
-            $block.eq(1).show()
-        }, 500)
-
+            $block.eq(0).show()
+        }, 1000)
 
 
         $button.on('click', function () {
@@ -100,10 +118,22 @@ $(document).ready(function () {
         })
     }
 
+    function category_types() {
+        var $button = $('.general-category__types'),
+            $nav = $('.general-category__nav')
+
+
+        $button.on('click', function () {
+            $(this).toggleClass('open')
+            $nav.slideToggle()
+        })
+    }
+
 
     sliders()
     up_btn()
     selects()
     category()
+    category_types() 
 
 })

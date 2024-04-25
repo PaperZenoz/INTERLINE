@@ -14,8 +14,14 @@
   cursor: pointer
   padding: 0 15px
   border-radius: 5px
+  @media screen and (max-width: 1023px)
+    height: 56px
+    line-height: 56px
+    font-size: 14px
+
+
   &:hover
-    scale: 1.1
+    scale: 1.05
 
   &--red
     background-color: $red
@@ -51,8 +57,14 @@
   padding: 0px 38px 0px 15px
   border-radius: 5px
   position: relative
+  @media screen and (max-width: 1023px)
+    height: 66px
+    line-height: 66px
+    font-size: 14px
+
+
   &:hover
-    scale: 1.1
+    scale: 1.05
 
   &:after
     content: ''

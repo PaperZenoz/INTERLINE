@@ -11,6 +11,9 @@
     grid-gap: 30px
     margin-bottom: 40px
     position: relative
+    @media screen and (max-width: 1919px)
+      grid-template-columns: 1fr
+
 
   &__contacts
     display: flex
@@ -20,6 +23,9 @@
     bottom: 0
     gap: 20px
     translate: 200%
+    @media screen and (max-width: 1919px)
+      display: none
+
 
   &__content
     color: $white
@@ -30,18 +36,38 @@
     align-items: center
     margin-bottom: 40px
     @extend %lc
+    @media screen and (max-width: 1023px)
+      margin-bottom: 30px
+
+  &__item-text
+    @media screen and (max-width: 767px)
+      width: 160px
+
 
   &__item-icon
     width: 65px
     margin-right: 5px
 
+    img
+      @media screen and (max-width: 767px)
+        width: 40px
+
 
   &__list
     margin-bottom: 60px
+    @media screen and (max-width: 1023px)
+      margin-bottom: 30px
+
 
   &__buttons
     display: flex
-    grid-gap: 30px
+    gap: 30px
+    @media screen and (max-width: 1023px)
+      flex-direction: column
+
+    .special-btn
+      @media screen and (max-width: 1023px)
+        width: 100%
 
 
   &__form
@@ -51,19 +77,33 @@
     padding: 40px
     margin-left: auto
     height: max-content
+    @media screen and (max-width: 1919px)
+      width: 100%
+    @media screen and (max-width: 1023px)
+      padding: 15px
+
 
     .input
       margin-bottom: 25px
+      @media screen and (max-width: 767px)
+        margin-bottom: 15px
+
 
     .btn
       height: 78px
       line-height: 78px
+      @media screen and (max-width: 767px)
+        height: 50px
+        line-height: 50px
+        min-width: 100%
 
 
   &__form-title
     font-size: 35px
     margin-bottom: 30px
     @extend %700
+    @media screen and (max-width: 767px)
+      font-size: 20px
 
 
   &__model
@@ -73,6 +113,17 @@
   &__types
     display: flex
     justify-content: space-between
+    gap: 30px
+    @extend %scrollbar
+    @media screen and (max-width: 1919px)
+      width: 920px
+      overflow-y: hidden
+      overflow-x: scroll
+    @media screen and (max-width: 1023px)
+      width: 600px
+    @media screen and (max-width: 767px)
+      width: 310px
+
 
   &__type
     color: $white
@@ -84,11 +135,18 @@
     @extend %up
     @include r(5px)
     font-size: 17px
+    flex-shrink: 0
+    @media screen and (max-width: 767px)
+      width: 270px
+      height: 180px
 
 
   &__type-img
     height: 160px
     margin-bottom: 20px
+    @media screen and (max-width: 767px)
+      height: 100px
+
 
 .general-information
   background-color: $black
@@ -96,6 +154,14 @@
   &__wrap
     @extend %fb
     gap: 50px
+    @media screen and (max-width: 1919px)
+      gap: 30px
+    @media screen and (max-width: 1023px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+    @media screen and (max-width: 767px)
+      grid-template-columns: 1fr
+
 
   &__item
     color: $white
@@ -105,23 +171,76 @@
       @extend %up
       font-size: 18px
       @extend %500
+      @media screen and (max-width: 1023px)
+        font-size: 16px
+
 
     span
       font-size: 16px
+      @media screen and (max-width: 1023px)
+        font-size: 14px
+      @media screen and (max-width: 767px)
+        width: 185px
+        display: block
+
 
   &__num
     @extend %800
     font-size: 65px
     color: $red
+    @media screen and (max-width: 1023px)
+      font-size: 40px
+
 
 .general-category
+
+  &__types
+    height: 115px
+    background-color: $black
+    color: white
+    line-height: 115px
+    @include r(5px)
+    padding: 0 30px
+    position: relative
+    display: none
+    @media screen and (max-width: 1919px)
+      display: block
+
+
+    @media screen and (max-width: 1023px)
+      height: 82px
+      line-height: 82px
+
+
+    &:before
+      content: ''
+      display: block
+      width: 10px
+      height: 10px
+      position: absolute
+      top: 50%
+      right: 30px
+      @extend %transition
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.75009 2.08341L1.25009 2.08341C1.17415 2.08365 1.09972 2.10459 1.0348 2.14399C0.969887 2.18338 0.916943 2.23973 0.881671 2.30698C0.846399 2.37422 0.830133 2.44981 0.834627 2.52561C0.839119 2.60141 0.8642 2.67455 0.907169 2.73716L4.65717 8.15383C4.81259 8.37841 5.18675 8.37841 5.34259 8.15383L9.09259 2.73716C9.13599 2.67469 9.16145 2.60151 9.16618 2.52558C9.17092 2.44965 9.15476 2.37388 9.11946 2.30649C9.08415 2.23911 9.03106 2.18268 8.96594 2.14335C8.90082 2.10402 8.82616 2.08329 8.75009 2.08341Z' fill='white'/%3E%3C/svg%3E%0A")
+
+    &.open:before
+      rotate: 180deg
+
+
   &__wrap
     display: grid
     grid-template-columns: 430px auto
     grid-gap: 75px
+    @media screen and (max-width: 1919px)
+      grid-template-columns: 1fr
+      grid-gap: 30px
+
 
   &__nav
     margin-bottom: 50px
+    @media screen and (max-width: 1919px)
+      display: none
+
 
   &__nav-item
     height: 115px
@@ -131,6 +250,9 @@
     @include r(5px)
     @extend %transition
     cursor: pointer
+    @media screen and (max-width: 767px)
+      height: 82px
+
 
     &:hover, &.active
       color: $white
@@ -138,9 +260,9 @@
 
       .general-category__nav-icon
         background-color: $red
+
         img
           filter: invert(100%)
-
 
 
   &__nav-icon
@@ -150,10 +272,18 @@
     background-color: $gray
     margin-right: 20px
     @extend %transition
+    @media screen and (max-width: 767px)
+      width: 65px
+      height: 65px
+      img
+        scale: 0.9
 
   &__form
     padding: 50px 25px
     background-color: $gray-light
+    @media screen and (max-width: 1919px)
+      display: none
+
 
     .input
       height: 100px
@@ -176,20 +306,39 @@
     background-color: $gray-light
     max-width: 650px
     margin: 0 15px
+    @media screen and (max-width: 1919px)
+      max-width: 100%
+    @media screen and (max-width: 767px)
+      padding: 15px
+      margin: 0
+
 
   &__sign
     font-size: 14px
     display: block
     margin-bottom: 10px
+    color: #6B6B6B
+    @media screen and (max-width: 767px)
+      font-size: 12px
+
 
   &__item-buttons
     display: flex
     gap: 15px
+    @media screen and (max-width: 1023px)
+      flex-direction: column
+
 
     .btn
       height: 83px
       line-height: 83px
       min-width: 275px
+      @media screen and (max-width: 1023px)
+        height: 56px
+        line-height: 56px
+        width: 100%
+        min-width: 100%
+
 
   &__img
     height: 360px
@@ -197,6 +346,9 @@
     overflow: hidden
     position: relative
     margin-bottom: 25px
+    @media screen and (max-width: 767px)
+      height: 180px
+
 
     img
       @extend %transition
@@ -227,6 +379,9 @@
 
   &__slider
     margin-bottom: 190px
+    @media screen and (max-width: 1023px)
+      margin-bottom: 100px
+
 
   &__button
     @extend %fx
@@ -235,25 +390,47 @@
       width: 525px
       height: 123px
       line-height: 123px
+      @media screen and (max-width: 1023px)
+        height: 66px
+        line-height: 66px
+      @media screen and (max-width: 767px)
+        width: 100%
+
 
       &:after
         background-color: $black
         width: 68px
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.38123 2.91633C8.11199 3.16269 7.96074 3.48585 7.96074 3.81475C7.96074 4.14366 8.11199 4.45138 8.38123 4.67024L15.4904 10.4473L8.38123 16.9501C8.11962 17.1974 7.97486 17.5181 7.97813 17.8431C7.9814 18.1682 8.13245 18.4716 8.39873 18.688C8.66501 18.9043 9.02522 19.0164 9.40179 19C9.77835 18.9836 10.1411 18.8401 10.412 18.6003L18.5365 11.1687C18.8058 10.9224 18.957 10.5992 18.957 10.2703C18.957 9.94138 18.8058 9.63366 18.5365 9.4148L10.412 2.81267C10.1427 2.59388 9.77745 2.48189 9.39662 2.50133C9.01579 2.52077 8.65056 2.67005 8.38123 2.91633Z' fill='white' /%3E%3C/svg%3E")
+        @media screen and (max-width: 1023px)
+          display: none
+
 
 .general-category-slider
   width: 1315px
+  @media screen and (max-width: 1919px)
+    width: 920px
+  @media screen and (max-width: 1023px)
+    width: 600px
+  @media screen and (max-width: 767px)
+    width: 310px
+
 
 .general-leasing
   background-image: url("../../images/general-leasing/1.jpg")
   background-size: cover
   color: $white
+  @media screen and (max-width: 767px)
+    background-image: url("../../images/general-leasing/2.jpg")
+
 
   &__title
     font-size: 50px
     @extend %up
     @extend %700
     margin-bottom: 60px
+    @media screen and (max-width: 767px)
+      font-size: 20px
+
 
   &__list
     margin-bottom: 60px
@@ -263,6 +440,9 @@
     align-items: center
     margin-bottom: 40px
     @extend %lc
+    @media screen and (max-width: 767px)
+      margin-bottom: 30px
+
 
   &__item-icon
     width: 65px
@@ -270,6 +450,9 @@
 
   .special-btn
     width: 440px
+    @media screen and (max-width: 767px)
+      width: 100%
+
 
     &:after
       width: 53px
@@ -284,10 +467,16 @@
     text-align: center
     font-size: 180px
     z-index: 0
+    @media screen and (max-width: 1919px)
+      display: none
 
   &__wrap
     margin-top: 50px
     margin-bottom: 200px
+    @media screen and (max-width: 1919px)
+      margin-top: 0px
+      margin-bottom: 60px
+
 
   &__column
     height: 570px
@@ -297,12 +486,20 @@
     z-index: 1
     @extend %transition
     opacity: 0
+    @media screen and (max-width: 1919px)
+      justify-content: center
+      align-items: center
+    @media screen and (max-width: 1023px)
+      height: auto
+
 
     &.active
       opacity: 1
 
     &:nth-child(1), &:nth-child(3)
       z-index: 3
+      @media screen and (max-width: 1919px)
+        display: none
 
   &__item
     display: grid
@@ -312,6 +509,13 @@
     position: relative
     margin: 10px
     background-color: $white
+    @media screen and (max-width: 1919px)
+      grid-template-columns: 1fr
+      background-color: $transparent
+      box-shadow: none
+    @media screen and (max-width: 767px)
+      padding: 15px
+
 
     &:before
       content: ''
@@ -326,7 +530,10 @@
       background-position: right 500px top 85px
       z-index: 2
       pointer-events: none
-      opacity: 0
+      opacity: 1
+      @media screen and (max-width: 1919px)
+        display: none
+
 
     &.active:before
 
@@ -344,6 +551,8 @@
     text-align: center
     margin-top: 15px
     margin-bottom: 50px
+    @media screen and (max-width: 1919px)
+      display: none
 
   &__img
     display: block
@@ -351,16 +560,65 @@
     bottom: -10px
     text-align: center
 
+    img
+      @media screen and (max-width: 1023px)
+        width: 100%
+        margin: 0 auto
+        max-height: 270px
+      @media screen and (max-width: 767px)
+        max-height: 190px
+
+
+  &__advantage-list
+
+  &__advantage
+    padding: 5px 10px
+    background-color: $white
+    box-shadow: 0 4px 20px 0 rgba(167, 167, 167, 0.25)
+    width: 290px
+    font-size: 14px
+    text-align: center
+    flex-shrink: 0
+    margin: 5px 0
+    @media screen and (max-width: 767px)
+      width: 200px
+
+
+  &__advantages
+    display: none
+    margin-top: 50px
+    gap: 20px
+    width: 920px
+    overflow-x: scroll
+    overflow-y: hidden
+    background-color: #F6F6F6
+    @extend %scrollbar
+    @media screen and (max-width: 1919px)
+      display: flex
+    @media screen and (max-width: 1023px)
+      width: 600px
+    @media screen and (max-width: 767px)
+      width: 310px
+
+
 .general-services
   color: $white
   background-image: url("../../images/general-services/1.jpg")
   background-size: cover
+  @media screen and (max-width: 767px)
+    background-image: url("../../images/general-services/2.jpg")
+
 
   &__list
     margin-top: 100px
     @extend %fy
     margin-bottom: 60px
     gap: 50px
+    @media screen and (max-width: 767px)
+      flex-direction: column
+      align-items: flex-start
+      gap: 30px
+      margin-top: 60px
 
   &__item
     display: flex
@@ -373,6 +631,9 @@
   &__item-text
   .special-btn
     min-width: 415px
+    @media screen and (max-width: 767px)
+      min-width: 100%
+
 
     &:after
       width: 53px
@@ -382,21 +643,42 @@
     background-image: url("../../images/general-company/1.jpg")
     background-size: cover
     margin-top: 75px
+    @media screen and (max-width: 1919px)
+      background-image: none
+      background-color: $black
+    @media screen and (max-width: 767px)
+      background-color: $transparent
+
 
   &__content
-    min-height: 450px
     @extend %fx
     width: 600px
     flex-direction: column
     margin-left: auto
     padding: 60px 0
+    @media screen and (max-width: 1919px)
+      width: 100%
+    @media screen and (max-width: 1023px)
+      padding: 30px 0
+    @media screen and (max-width: 767px)
+      height: 640px
+      background-image: url("../../images/general-company/2.jpg")
+      background-size: cover
+      justify-content: flex-end
+      padding: 30px
+
 
     .btn
       margin-top: 30px
       width: 100%
+      @media screen and (max-width: 767px)
+        min-width: 100%
+
 
   &__text
     color: $white
+    @media screen and (max-width: 1023px)
+      font-size: 14px
 
 
     a
@@ -409,6 +691,11 @@
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 30px
     margin-top: 100px
+    @media screen and (max-width: 1919px)
+      grid-template-columns: 1fr
+    @media screen and (max-width: 767px)
+      margin-top: 30px
+
 
   &__sign
     color: $white
@@ -417,28 +704,51 @@
     left: 45px
     bottom: 45px
     font-size: 30px
+    @media screen and (max-width: 767px)
+      font-size: 16px
+      left: 15px
+      bottom: 15px
+
 
   &__banner
     height: 640px
+    @media screen and (max-width: 767px)
+      height: 290px
+
 
   &__img
     height: 370px
     margin-bottom: 35px
+    @media screen and (max-width: 1023px)
+      height: 285px
+    @media screen and (max-width: 767px)
+      margin-bottom: 20px
+
 
   &__text
     font-size: 16px
     color: #8F8F8F
+    @media screen and (max-width: 767px)
+      font-size: 14px
+
 
     strong
       font-size: 18px
       display: block
       margin-bottom: 25px
       color: $black
+      @media screen and (max-width: 767px)
+        margin-bottom: 10px
+          font-size: 16px
+
 
   &__list
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 30px
+    @media screen and (max-width: 767px)
+      grid-template-columns: 1fr
+
 
 .general-manager
   &__wrap
@@ -448,41 +758,70 @@
     grid-gap: 30px
     padding: 80px 100px
     background-color: $gray-light
+    @media screen and (max-width: 1919px)
+      grid-template-columns: 1fr
+    @media screen and (max-width: 1023px)
+      padding: 15px
+
 
   &__general
     display: grid
     grid-template-columns: 280px auto
     grid-gap: 30px
     margin-bottom: 50px
+    @media screen and (max-width: 1023px)
+      grid-template-columns: 120px auto
+    @media screen and (max-width: 767px)
+      grid-gap: 15px
+      margin-bottom: 20px
 
   &__img
     height: 280px
+    @media screen and (max-width: 1023px)
+      height: 120px
+
 
   &__online
     @extend %fy
     gap: 10px
     font-size: 14px
     margin-bottom: 15px
+    @media screen and (max-width: 767px)
+      font-size: 12px
+      margin-bottom: 10px
+
 
   &__name
     font-size: 22px
     margin-bottom: 10px
+    @media screen and (max-width: 767px)
+      font-size: 16px
+
 
   &__post
     color: #6B6B6B
     margin-bottom: 40px
+    @media screen and (max-width: 767px)
+      font-size: 14px
+      margin-bottom: 10px
 
 
   &__contacts .h3
     font-size: 30px
     margin-bottom: 30px
     margin-top: 30px
+    @media screen and (max-width: 767px)
+      font-size: 20px
+
 
   &__item
     display: flex
     align-items: center
     margin-bottom: 40px
     @extend %lc
+    @media screen and (max-width: 1023px)
+      margin-bottom: 20px
+
 
   &__item-icon
     width: 35px
@@ -493,10 +832,7 @@
       text-decoration: underline
 
   &__form
-    .input
-      height: 97px
-      margin-bottom: 30px
-      background-color: $gray
+    display: block
 
     .textarea
       margin-bottom: 30px
@@ -506,13 +842,44 @@
       width: 100%
       height: 110px
       line-height: 110px
+      @media screen and (max-width: 767px)
+        min-width: 100%
+        height: 68px
+        line-height: 68px
+
+  &__form .input
+    height: 97px
+    margin-bottom: 30px
+    background-color: $gray
+    @media screen and (max-width: 767px)
+      height: 68px
+      line-height: 68px
+
+  &__general-information .btn
+    @media screen and (max-width: 767px)
+      width: 100%
+      min-width: 100%
+      height: 46px
+      line-height: 46px
+      font-size: 12px
+
 
 .general-brands
   &__wrap
     margin-top: 70px
     display: flex
+    @media screen and (max-width: 1919px)
+      flex-direction: column
+      gap: 30px
 
   &__item
+    @media screen and (max-width: 1023px)
+      img
+        width: 170px
+    @media screen and (max-width: 767px)
+      img
+        width: 90px
+
 
   &__list
     display: flex
@@ -524,4 +891,10 @@
     margin-right: 70px
     font-size: 18px
     flex-shrink: 0
+    @media screen and (max-width: 1023px)
+      margin-right: 0
+      font-size: 14px
+    
+    	
+    
 

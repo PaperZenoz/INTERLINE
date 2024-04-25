@@ -14,6 +14,11 @@
     @extend %transition
     cursor: pointer
     translate: 0 -50%
+    @media screen and (max-width: 767px)
+      width: 20px
+      height: 50px
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_619_126)'%3E%3Cpath d='M4.08713 1.41086C3.97247 1.5344 3.90806 1.69646 3.90806 1.8614C3.90806 2.02634 3.97247 2.18066 4.08713 2.29041L7.11455 5.18748L4.08713 8.44852C3.97572 8.57254 3.91408 8.73337 3.91547 8.89638C3.91686 9.05939 3.98118 9.21154 4.09458 9.32005C4.20797 9.42856 4.36137 9.48476 4.52173 9.47654C4.68209 9.46831 4.83658 9.39633 4.95193 9.27609L8.41175 5.54928C8.52641 5.42574 8.59082 5.26368 8.59082 5.09874C8.59082 4.9338 8.52641 4.77948 8.41175 4.66973L4.95193 1.35887C4.83724 1.24916 4.68171 1.193 4.51953 1.20275C4.35736 1.21249 4.20182 1.28735 4.08713 1.41086Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_619_126'%3E%3Crect width='9.9525' height='9.80326' rx='4.90163' transform='matrix(-3.71189e-08 1 -0.998198 0.0600047 10.6357 0)' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+
 
     &:hover
       background-color: $red
@@ -22,19 +27,22 @@
   .slick-next
     right: -30px
     @include r(5px)
+    @media screen and (max-width: 767px)
+      right: 0
+
 
   .slick-prev
     rotate: 180deg
     left: -30px
     @include r(5px)
+    @media screen and (max-width: 767px)
+      left: 0
+
 
 .custom-slick-arrow--2
   .slick-arrow
     background-color: $transparent !important
     background-image: url("data:image/svg+xml,%3Csvg width='19' height='20' viewBox='0 0 19 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.2848 2.045C6.06218 2.27941 5.93712 2.59729 5.93712 2.92875C5.93712 3.2602 6.06218 3.57809 6.2848 3.8125L12.1629 10L6.2848 16.1875C6.06849 16.4233 5.94879 16.739 5.9515 17.0668C5.95421 17.3945 6.07909 17.708 6.29927 17.9398C6.51944 18.1715 6.81728 18.303 7.12864 18.3058C7.44 18.3087 7.73996 18.1827 7.96392 17.955L14.6816 10.8837C14.9042 10.6493 15.0293 10.3315 15.0293 10C15.0293 9.66854 14.9042 9.35066 14.6816 9.11625L7.96393 2.045C7.74124 1.81066 7.43925 1.67902 7.12436 1.67902C6.80948 1.67902 6.50749 1.81066 6.2848 2.045Z' fill='%231E1E1E'/%3E%3C/svg%3E%0A")
-
-
-
 
 
 .custom-slick-dots
@@ -45,6 +53,11 @@
     display: flex
     gap: 25px
     bottom: -60px
+    @media screen and (max-width: 1023px)
+      bottom: -30px
+    @media screen and (max-width: 767px)
+      gap: 5px 
+
 
     button
       font-size: 0
@@ -54,6 +67,10 @@
       border: none
       background-color: #CACACA
       transform: skew(-45deg)
+      @media screen and (max-width: 1023px)
+        width: 44px
+        height: 5px
+
 
     .slick-active button
       background-color: $red
@@ -73,12 +90,9 @@
   position: fixed
   z-index: 10
   display: none
+
   svg
     margin-top: 13px
-  @media screen and (max-width: 1023px)
-    width: 30px
-    height: 30px
-    background-size: contain
   
 
 

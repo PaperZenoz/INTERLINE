@@ -8,26 +8,47 @@
 
 .header-top
   background-color: $white
+
+
+  &__mobile
+    @extend %fy
+    gap: 5px
+
+
+  &__mobile-telephone
+    width: 60px
+    height: 60px
+    @include r(5px)
+    background-color: $black
+    @extend %fc
+    display: none
+    @media screen and (max-width: 1023px)
+      display: flex
+
+
   &__burger
     display: none
     width: 60px
     height: 60px
     @include r(5px)
     background-color: $red
+    rotate: 180deg
     @media screen and (max-width: 1023px)
       display: flex
       justify-content: center
       align-items: center
+
+    &.open
+      svg path:nth-child(2)
+        d: path("M 1 9 H 10")
 
   &__wrap
     height: 120px
     @extend %fy
     justify-content: space-between
     @media screen and (max-width: 1023px)
-    	height: 90px
-    
-    	
-    
+      height: 90px
+
 
   &__logo
     display: flex
@@ -71,11 +92,19 @@
     @media screen and (max-width: 1023px)
       font-size: 10px
 
+
+
+
+
 .header-nav
   background-color: $black
   color: $white
   @media screen and (max-width: 1023px)
     display: none
+    position: absolute
+    left: 0
+    right: 0
+    padding: 30px 0
 
 
   &__wrap
@@ -83,6 +112,9 @@
     @extend %fb
     align-items: stretch
     height: 75px
+    @media screen and (max-width: 1023px)
+      flex-direction: column
+      height: auto
 
   &__item
     color: $white
@@ -91,6 +123,7 @@
     width: 100%
     @media screen and (max-width: 1919px)
       font-size: 16px
+      padding: 20px 0
 
 
     &:before
@@ -100,6 +133,68 @@
       right: 0
       height: 100%
       background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%)
+      @media screen and (max-width: 1023px)
+        width: 67px
+        height: 2px
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%)
+
 
     &:last-child:before
       display: none
+
+
+    > span:after
+      @media screen and (max-width: 1023px)
+        content: ''
+        width: 10px
+        height: 10px
+        display: block
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.75009 2.08341L1.25009 2.08341C1.17415 2.08365 1.09972 2.10459 1.0348 2.14399C0.969887 2.18338 0.916943 2.23973 0.881671 2.30698C0.846399 2.37422 0.830133 2.44981 0.834627 2.52561C0.839119 2.60141 0.8642 2.67455 0.907169 2.73716L4.65717 8.15383C4.81259 8.37841 5.18675 8.37841 5.34259 8.15383L9.09259 2.73716C9.13599 2.67469 9.16145 2.60151 9.16618 2.52558C9.17092 2.44965 9.15476 2.37388 9.11946 2.30649C9.08415 2.23911 9.03106 2.18268 8.96594 2.14335C8.90082 2.10402 8.82616 2.08329 8.75009 2.08341Z' fill='white'/%3E%3C/svg%3E%0A")
+        float: right
+        margin-left: 5px
+        position: relative
+        top: 3px
+
+
+  &__dropdown
+    position: absolute
+    background-color: $white
+    padding: 15px 0px
+    top: 100%
+    width: 100%
+    min-width: 300px
+    box-shadow: 0 4px 20px 0 rgba(167, 167, 167, 0.25)
+    display: none
+    z-index: 1
+
+  &__dropdown-item
+    display: block
+    padding: 15px
+    @extend %transition
+
+    &:hover
+      color: $white
+      background-color: $black
+
+  &__item:hover .header-nav__dropdown
+    display: block
+
+  &__mobile-contacts
+    display: none
+    a
+      color: $white
+      display: flex
+      &:first-child
+        font-size: 22px
+      &:last-child
+        font-size: 18px
+        text-decoration: underline
+
+    @media screen and (max-width: 1023px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 30px

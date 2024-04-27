@@ -25,6 +25,13 @@
     <div class="{{ _ }} section section--no-top">
         <div class="container-lg">
             <div class="{{ _ }}__wrap">
+                <div class="{{ _ }}__mobile-gallery custom-slick-dots custom-slick-arrow">
+                    {% for i in range(1, 5) %}
+                        <div class="{{ _ }}__mobile-gallery-item img">
+                            <img src="images/{{ _ }}/{{ loop.index }}.jpg" alt=""/>
+                        </div>
+                    {% endfor %}
+                </div>
                 <div class="{{ _ }}__gallery">
                     <a data-fancybox href="images/{{ _ }}/1.jpg" class="{{ _ }}__general-img img">
                         <img src="images/{{ _ }}/1.jpg" alt=""/>
@@ -44,7 +51,7 @@
                     <div class="{{ _ }}__available">
                         В наличии
                     </div>
-                    <h4 class="h4">Описание:</h4>
+                    <h4 class="h4">Основные характеристики:</h4>
                     <div class="{{ _ }}__line">Колёсная формула: 6х4</div>
                     <div class="{{ _ }}__line">Модель двигателя: WP13.550E501</div>
                     <div class="{{ _ }}__line">Мощность двигателя: 550 л.с. / 2400 об.мин</div>
@@ -119,7 +126,7 @@
     <div class="{{ _ }} section">
         <div class="container-lg">
             <div class="{{ _ }}__wrap-first">
-                <a href="images/{{ _ }}/1.jpg" class="{{ _ }}__col img">
+                <a data-fancybox href="images/{{ _ }}/1.jpg" class="{{ _ }}__col img">
                     <img src="images/{{ _ }}/1.jpg" alt=""/>
                 </a>
 
@@ -137,11 +144,21 @@
 
 
                     <ul class="ul">
-                        <li>Уменьшенный расход горючего. Достигается и за счёт мотора оптимизированной мощности,  а также вследствие особенностей конструкции машины. Например, кабина оборудована по бокам обтекателями, что дает возможность серьезно уменьшить сопротивление лобового стекла и таким образом снизить расход горючего.</li>
+                        <li>Уменьшенный расход горючего. Достигается и за счёт мотора оптимизированной мощности, а также
+                            вследствие особенностей конструкции машины. Например, кабина оборудована по бокам
+                            обтекателями, что дает возможность серьезно уменьшить сопротивление лобового стекла и таким
+                            образом снизить расход горючего.
+                        </li>
                         <li>Недорогое техобслуживание, доступные запасные детали. <br>
-                            Удобство и высокая эргономика.</li>
-                        <li>От системы отопления, которая адаптирована к северным климатическим условиям,  до 4-точечной системы пневматической подвески и амортизации поперечного типа кабины: Шакман 8х4 X3000 — это самосвал, в котором есть всё для комфорта водителя. </li>
-                        <li>Модель хорошо приспособлена для работы в строительстве, но его с успехом можно использовать в с/х, ЖКХ, дорожной сферах.</li>
+                            Удобство и высокая эргономика.
+                        </li>
+                        <li>От системы отопления, которая адаптирована к северным климатическим условиям, до 4-точечной
+                            системы пневматической подвески и амортизации поперечного типа кабины: Шакман 8х4 X3000 —
+                            это самосвал, в котором есть всё для комфорта водителя. 
+                        </li>
+                        <li>Модель хорошо приспособлена для работы в строительстве, но его с успехом можно использовать
+                            в с/х, ЖКХ, дорожной сферах.
+                        </li>
                     </ul>
                 </div>
 
@@ -212,7 +229,7 @@
                     {% endfor %}
 
                 </div>
-                <a href="images/{{ _ }}/2.jpg" class="{{ _ }}__col img">
+                <a data-fancybox href="images/{{ _ }}/2.jpg" class="{{ _ }}__col img">
                     <img src="images/{{ _ }}/2.jpg" alt=""/>
                 </a>
 
@@ -264,7 +281,7 @@
     <div class="{{ _ }} section section--no-bottom">
         <div class="container-lg">
             <h2 class="h2 h2--underline">Аналогичные модели</h2>
-            <div class="{{ _ }}__slider custom-slick-arrow">
+            <div class="{{ _ }}__slider custom-slick-arrow custom-slick-dots">
 
 
                 {% for i in range(1, 5) %}
@@ -370,7 +387,7 @@
                 </div>
                 <form href="#" class="{{ _ }}__form">
                     <input type="text" class="input" placeholder="Имя">
-                    <input type="text" class="input" placeholder="Телефон">
+                    <input type="text" class="input js--tel" placeholder="Телефон">
                     <textarea class="textarea" placeholder="Задайте вопрос"></textarea>
                     <button class="btn btn--red"> Задать вопрос</button>
                 </form>

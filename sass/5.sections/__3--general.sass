@@ -16,13 +16,13 @@
 
 
   &__contacts
+    position: fixed
+    right: 15px
+    bottom: 90px
     display: flex
-    flex-direction: column
-    position: absolute
-    right: 0
-    bottom: 0
+    flex-direction: column 
     gap: 20px
-    translate: 200%
+    z-index: 1
     @media screen and (max-width: 1919px)
       display: none
 
@@ -416,11 +416,23 @@
 
 
 .general-leasing
-  background-image: url("../../images/general-leasing/1.jpg")
-  background-size: cover
+
   color: $white
-  @media screen and (max-width: 767px)
+  @media screen and (max-width: 1919px)
     background-image: url("../../images/general-leasing/2.jpg")
+    background-size: cover
+
+
+
+
+
+  &__bg
+    background-image: url("../../images/general-leasing/1.jpg")
+    background-size: cover
+    padding-top: 90px
+    padding-bottom: 90px
+    @media screen and (max-width: 1919px)
+      background-image: none
 
 
   &__title
@@ -552,7 +564,7 @@
     margin-top: 15px
     margin-bottom: 50px
     @media screen and (max-width: 1919px)
-      display: none
+      font-size: 16px
 
   &__img
     display: block
@@ -594,7 +606,7 @@
     background-color: #F6F6F6
     @extend %scrollbar
     @media screen and (max-width: 1919px)
-      display: flex
+      display: none
     @media screen and (max-width: 1023px)
       width: 600px
     @media screen and (max-width: 767px)
@@ -614,7 +626,7 @@
     @extend %fy
     margin-bottom: 60px
     gap: 50px
-    @media screen and (max-width: 767px)
+    @media screen and (max-width: 1023px)
       flex-direction: column
       align-items: flex-start
       gap: 30px
@@ -665,7 +677,7 @@
       background-image: url("../../images/general-company/2.jpg")
       background-size: cover
       justify-content: flex-end
-      padding: 30px
+      padding: 40px 15px
 
 
     .btn
@@ -789,6 +801,10 @@
     @media screen and (max-width: 767px)
       font-size: 12px
       margin-bottom: 10px
+      gap: 5px
+      svg
+        width: 5px
+        height: 5px
 
 
   &__name
@@ -812,6 +828,8 @@
     margin-top: 30px
     @media screen and (max-width: 767px)
       font-size: 20px
+      margin-bottom: 15px
+      margin-top: 15px
 
 
   &__item

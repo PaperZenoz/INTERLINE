@@ -5,6 +5,8 @@
     margin-bottom: 20px
     padding-left: 25px
     position: relative
+    @media screen and (max-width: 767px)
+      padding-left: 15px
 
     &:before
       content: ''
@@ -15,6 +17,9 @@
       position: absolute
       left: 0
       top: 5px
+      @media screen and (max-width: 767px)
+        width: 7px
+        height: 7px
 
     @media screen and (max-width: 767px)
-      font-size: 13px
+      font-size: 12px

@@ -4,16 +4,24 @@
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 50px 25px
     margin-top: 100px
+    @media screen and (max-width: 1919px)
+      display: block
+      margin-bottom: 100px
 
   &__item
     padding: 40px
     @include r(10px)
     height: 500px
     background-color: $gray-light
-    display: flex
+    display: flex !important
     flex-direction: column
     justify-content: space-between
     align-items: center
+    @media screen and (max-width: 767px)
+    	height: 400px
+    
+    	
+    
 
     .h4
       margin-bottom: 50px
@@ -22,7 +30,16 @@
     .btn
       height: 72px
       line-height: 72px
+      @media screen and (max-width: 767px)
+      	min-width: 100%
+      
+      	
+      
 
+    img
+      @media screen and (max-width: 767px)
+        max-width: 190px
+        max-height: 160px
 
   &__item-last
     background-color: $black

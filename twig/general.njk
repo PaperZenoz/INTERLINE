@@ -39,15 +39,15 @@
                 </div>
                 <div class="{{ _ }}__form">
                     <h2 class="{{ _ }}__form-title">
-                        Скачайте кп со скидкой
+                        Выгодный лизин
                     </h2>
                     {#                    <div class="{{ _ }}__model"> #}
                     {#                        <span>Выберите модель</span> #}
                     {#                    </div> #}
 
-                    <input type="text" class="input" placeholder="Телефон">
+                    <input type="text" class="input js--tel" placeholder="Телефон">
                     <input type="text" class="input" placeholder="Email">
-                    <a href="#" class="btn" style="width: 100%">ПОЛУЧИТЬ СЕЙЧАС</a>
+                    <a href="#" class="btn" style="width: 100%">Заявка на просчет</a>
 
                 </div>
                 <div class="{{ _ }}__contacts">
@@ -74,7 +74,8 @@
                     'САМОСВАЛЫ',
                     'ТЯГАЧИ',
                     'Автобетоносмесители',
-                    'Автобусы'] %}
+                    'Автобусы',
+                    'Катки'] %}
 
                 {% for item in list %}
                     <div class="{{ _ }}__type">
@@ -170,7 +171,7 @@
                     </div>
                     <form class="{{ _ }}__form">
                         <h3 class="h3">Консультация</h3>
-                        <input type="text" class="input" placeholder="Введите номер телефона">
+                        <input type="text" class="input js--tel" placeholder="Введите номер телефона">
                         <a href="#" class="btn">
                             Оставить заявку
                         </a>
@@ -231,31 +232,37 @@
     </div>
     {% set  _ = 'general-leasing' %}
     <div class="{{ _ }} section">
-        <div class="container">
-            <div class="{{ _ }}__wrap">
-                <div class="{{ _ }}__title">
-                    ВЫГОДНЫЙ ЛИЗИНГ
-                </div>
-                <div class="{{ _ }}__list">
-                    {% set  list = [
-                        'Первоначальный взнос 0 %',
-                        'Одобрение за 5 минут'] %}
-
-                    {% for item in list %}
-                        <div class="{{ _ }}__item">
-                            <div class="{{ _ }}__item-icon">
-                                <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
-                            </div>
-                            <div class="{{ _ }}__item-text">
-                                {{ item }}
-                            </div>
+        <div class="container-lg">
+            <div class="{{_}}__bg">
+                <div class="container">
+                    <div class="{{ _ }}__wrap">
+                        <div class="{{ _ }}__title">
+                            ВЫГОДНЫЙ ЛИЗИНГ
                         </div>
-                    {% endfor %}
-                </div>
+                        <div class="{{ _ }}__list">
+                            {% set  list = [
+                                'Первоначальный взнос 0 %',
+                                'Одобрение за 5 минут'] %}
 
-                <a href="#" class="special-btn">УЗНАТЬ УСЛОВИЯ</a>
+                            {% for item in list %}
+                                <div class="{{ _ }}__item">
+                                    <div class="{{ _ }}__item-icon">
+                                        <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
+                                    </div>
+                                    <div class="{{ _ }}__item-text">
+                                        {{ item }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <a href="#" class="special-btn">УЗНАТЬ УСЛОВИЯ</a>
+                    </div>
+                </div>
             </div>
+
         </div>
+
     </div>
     {% set  _ = 'general-top' %}
     <div class="{{ _ }} section">
@@ -467,7 +474,7 @@
                 </div>
                 <form href="#" class="{{ _ }}__form">
                     <input type="text" class="input" placeholder="Имя">
-                    <input type="text" class="input" placeholder="Телефон">
+                    <input type="text" class="input js--tel" placeholder="Телефон">
                     <textarea class="textarea" placeholder="Задайте вопрос"></textarea>
                     <button class="btn btn--red"> Задать вопрос</button>
                 </form>

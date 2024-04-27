@@ -1,0 +1,75 @@
+.popup
+  color: $white
+  padding: 65px 105px
+  background-color: $black
+  background-size: cover
+  @media screen and (max-width: 767px)
+    padding: 15px
+
+
+  &__wrap
+    display: grid
+    grid-template-columns: auto 625px
+    grid-gap: 30px
+    @media screen and (max-width: 1919px)
+      grid-template-columns: 1fr
+
+
+  &__img
+    height: 475px
+    @include r(10px)
+    overflow: hidden
+    @media screen and (max-width: 1023px)
+      height: 250px
+
+
+  &__form
+    width: 426px
+    @media screen and (max-width: 1919px)
+      width: 100%
+
+
+    span
+      display: block
+      margin-bottom: 30px
+      font-size: 18px
+
+    .btn
+      height: 78px
+      line-height: 78px
+      width: 100%
+      @media screen and (max-width: 767px)
+        height: 50px
+        line-height: 50px
+        min-width: 100%
+
+
+    .input
+      margin-bottom: 25px
+
+
+  &--action
+    background-image: url("../../images/popup/1.jpg")
+
+
+  &--callback
+    background-image: url("../../images/popup/2.jpg")
+
+
+  &--services
+    background-image: url("../../images/popup/3.jpg")
+
+
+  &--price
+    background-color: $white
+    color: $black
+
+    strong
+      font-size: 20px
+      display: block
+      margin-bottom: 15px
+
+    .input
+      border: 1px solid $red
+
+

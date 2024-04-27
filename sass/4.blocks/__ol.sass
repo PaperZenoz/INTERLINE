@@ -38,6 +38,7 @@
 
 .ol--second
   position: relative
+
   li::before
     content: counter(num)
     position: absolute
@@ -46,3 +47,8 @@
     font-size: 60px
     @extend %700
     color: $gray-light
+    @media screen and (max-width: 767px)
+      left: 10px
+      top: 10px
+
+

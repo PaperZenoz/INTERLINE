@@ -44,9 +44,17 @@ $(document).ready(function () {
                 {
                     breakpoint: 1920,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         dots: true
                     }
+                }, {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        dots: true
+
+                    }
+
                 }
             ]
         })
@@ -77,26 +85,25 @@ $(document).ready(function () {
         }
 
 
-
-            $( window ).resize(function() {
-                if ($(window).width() < 1920 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
-                    $('.product-card__mobile-gallery').slick({
-                        slidesToShow: 1,
-                        responsive: [
-                            {
-                                breakpoint: 1920,
-                                settings: {
-                                    dots: true,
-                                    lazyLoad: 'ondemand'
-                                }
+        $(window).resize(function () {
+            if ($(window).width() < 1920 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
+                $('.product-card__mobile-gallery').slick({
+                    slidesToShow: 1,
+                    responsive: [
+                        {
+                            breakpoint: 1920,
+                            settings: {
+                                dots: true,
+                                lazyLoad: 'ondemand'
                             }
-                        ]
+                        }
+                    ]
 
 
-                    })
-                }
+                })
+            }
 
-            });
+        });
 
         if ($(window).width() < 1920 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
             $('.product-card__mobile-gallery').slick({
@@ -170,7 +177,7 @@ $(document).ready(function () {
         setTimeout(function () {
             $block.hide()
             $block.eq(0).show()
-        }, 1000)
+        }, 2000)
 
 
         $button.on('click', function () {
@@ -207,9 +214,6 @@ $(document).ready(function () {
 
 
     $('.js--tel').inputmask("+7 (999) 999-9999")
-
-
-
 
 
     sliders()

@@ -4,7 +4,6 @@
   background-repeat: no-repeat
   background-position: center
 
-
   &__wrap
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -14,22 +13,19 @@
     @media screen and (max-width: 1919px)
       grid-template-columns: 1fr
 
-
   &__contacts
     position: fixed
     right: 15px
     bottom: 90px
     display: flex
-    flex-direction: column 
+    flex-direction: column
     gap: 20px
-    z-index: 2 
+    z-index: 2
     @media screen and (max-width: 1919px)
       display: none
 
-
   &__content
     color: $white
-
 
   &__item
     display: flex
@@ -43,7 +39,6 @@
     @media screen and (max-width: 767px)
       width: 160px
 
-
   &__item-icon
     width: 65px
     margin-right: 5px
@@ -52,12 +47,10 @@
       @media screen and (max-width: 767px)
         width: 40px
 
-
   &__list
     margin-bottom: 60px
     @media screen and (max-width: 1023px)
       margin-bottom: 30px
-
 
   &__buttons
     display: flex
@@ -68,7 +61,6 @@
     .special-btn
       @media screen and (max-width: 1023px)
         width: 100%
-
 
   &__form
     width: 510px
@@ -97,7 +89,6 @@
         line-height: 50px
         min-width: 100%
 
-
   &__form-title
     font-size: 35px
     margin-bottom: 30px
@@ -105,10 +96,8 @@
     @media screen and (max-width: 767px)
       font-size: 20px
 
-
   &__model
     margin-bottom: 40px
-
 
   &__types
     display: flex
@@ -124,7 +113,6 @@
     @media screen and (max-width: 767px)
       width: 310px
 
-
   &__type
     color: $white
     background-color: $black
@@ -136,6 +124,13 @@
     @include r(5px)
     font-size: 17px
     flex-shrink: 0
+    display: block
+    @extend %transition
+
+    &:hover
+      color: $black
+      background-color: $white
+
     @media screen and (max-width: 767px)
       width: 270px
       height: 180px
@@ -339,6 +334,11 @@
         width: 100%
         min-width: 100%
 
+    .btn--red:hover
+      color: $black
+      background-color: $white
+      border: 1px solid $red
+
 
   &__img
     height: 360px
@@ -387,7 +387,7 @@
     @extend %fx
 
     .special-btn
-      width: 525px
+      width: 435px
       height: 123px
       line-height: 123px
       @media screen and (max-width: 1023px)
@@ -403,6 +403,12 @@
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.38123 2.91633C8.11199 3.16269 7.96074 3.48585 7.96074 3.81475C7.96074 4.14366 8.11199 4.45138 8.38123 4.67024L15.4904 10.4473L8.38123 16.9501C8.11962 17.1974 7.97486 17.5181 7.97813 17.8431C7.9814 18.1682 8.13245 18.4716 8.39873 18.688C8.66501 18.9043 9.02522 19.0164 9.40179 19C9.77835 18.9836 10.1411 18.8401 10.412 18.6003L18.5365 11.1687C18.8058 10.9224 18.957 10.5992 18.957 10.2703C18.957 9.94138 18.8058 9.63366 18.5365 9.4148L10.412 2.81267C10.1427 2.59388 9.77745 2.48189 9.39662 2.50133C9.01579 2.52077 8.65056 2.67005 8.38123 2.91633Z' fill='white' /%3E%3C/svg%3E")
         @media screen and (max-width: 1023px)
           display: none
+
+    .special-btn:hover
+      border: 1px solid $red
+
+      &:after
+        background-color: $red
 
 
 .general-category-slider
@@ -421,9 +427,6 @@
   @media screen and (max-width: 1919px)
     background-image: url("../../images/general-leasing/2.jpg")
     background-size: cover
-
-
-
 
 
   &__bg

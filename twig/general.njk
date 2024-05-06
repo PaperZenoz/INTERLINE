@@ -78,12 +78,12 @@
                     'Катки'] %}
 
                 {% for item in list %}
-                    <div class="{{ _ }}__type">
+                    <a href="#" class="{{ _ }}__type">
                         <div class="{{ _ }}__type-img img img--contain">
                             <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
                         </div>
                         <div>{{ item }}</div>
-                    </div>
+                    </a>
                 {% endfor %}
             </div>
         </div>
@@ -178,6 +178,26 @@
                     </form>
                 </div>
                 <div class="{{ _ }}__right">
+                    <div class="catalog__filters" style="margin: 0 0 30px">
+                        <div class="catalog__filter">
+                            <span>Колёсная формула:</span>
+                            <select id="selectElement">
+                                <option>ВСЕ</option>
+                                <option>4x2</option>
+                                <option>6x4</option>
+                                <option>6x6</option>
+                            </select>
+                        </div>
+
+                        <div class="catalog__filter">
+                            <span>Кабина:</span> 
+                            <select id="selectElement2">
+                                <option>ВСЕ</option>
+                                <option>X 3000</option>
+                                <option>X 6000</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="{{ _ }}__list">
                         {% for i in range(1, 5) %}
                             <div class="{{ _ }}__list-item">
@@ -233,7 +253,7 @@
     {% set  _ = 'general-leasing' %}
     <div class="{{ _ }} section">
         <div class="container-lg">
-            <div class="{{_}}__bg">
+            <div class="{{ _ }}__bg">
                 <div class="container">
                     <div class="{{ _ }}__wrap">
                         <div class="{{ _ }}__title">

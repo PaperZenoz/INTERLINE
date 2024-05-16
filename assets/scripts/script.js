@@ -216,11 +216,61 @@ $(document).ready(function () {
     $('.js--tel').inputmask("+7 (999) 999-9999")
 
 
+    function myYandexMap() {
+        var points = [
+            {
+                coord: [55.037309, 82.931353],
+            }
+        ];
+
+        if ($('#map').length > 0) {
+            ymaps.ready(init);
+        }
+
+        var myMap
+
+        function init() {
+            myMap = new ymaps.Map(
+                'map',
+                {
+                    center: [55.037309, 82.931353],
+                    zoom: 16,
+                    type: 'yandex#map',
+                    controls: [],
+                }
+            );
+
+
+            for (var i = 0; i < points.length; i++) {
+                var placemark = new ymaps.Placemark(points[i].coord, {
+                    balloonContentHeader: points[i].adres,
+                    hideIcon: false
+                }, {
+                    hideIcon: false,
+                    iconLayout: 'default#image',
+                    mapAutoPan: false,
+                });
+
+
+                var zoomControl = new ymaps.control.ZoomControl({
+                    options: {
+                        size: "small"
+                    }
+                });
+
+                myMap.controls.add(zoomControl);
+                myMap.behaviors.disable('scrollZoom');
+                myMap.geoObjects.add(placemark);
+            }
+        }
+    }
+
+
     sliders()
     up_btn()
     selects()
     category()
     category_types()
     burger()
-
+    myYandexMap()
 })

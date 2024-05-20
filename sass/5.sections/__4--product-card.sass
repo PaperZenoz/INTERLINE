@@ -19,13 +19,19 @@
     grid-template-columns: 900px auto
     grid-gap: 110px
     @media screen and (max-width: 1919px)
+      grid-template-columns: 750px auto
+      grid-gap: 45px
+    
+    	
+    
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
       grid-gap: 100px
 
 
   &__mobile-gallery
     display: none
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       display: block
       width: 920px
     @media screen and (max-width: 1023px)
@@ -48,7 +54,7 @@
       height: 240px
 
   &__gallery
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       display: none
 
   &__general-img
@@ -81,7 +87,7 @@
     color: $green
     font-size: 14px
     margin-bottom: 60px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       margin-bottom: 30px
 
 
@@ -164,6 +170,11 @@
 .product-card-slider
   margin-bottom: 40px
   width: 810px
+  @media screen and (max-width: 1919px)
+  	width: 725px
+  
+  	
+  
   @media screen and (max-width: 1023px)
     width: 600px
   @media screen and (max-width: 767px)
@@ -180,7 +191,7 @@
     display: grid
     grid-template-columns: repeat(5, 1fr)
     grid-gap: 30px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr 1fr
       grid-gap: 20px
       margin-bottom: 0 !important
@@ -199,7 +210,7 @@
 
 
     &:last-child
-      @media screen and (max-width: 1919px)
+      @media screen and (max-width: 1599px)
         grid-column: 1/3
 
 
@@ -219,6 +230,12 @@
     font-size: 16px
     margin-bottom: 100px
     @media screen and (max-width: 1919px)
+      grid-gap: 45px
+      grid-template-columns: 750px auto
+
+
+
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
       grid-gap: 20px
       margin-bottom: 30px
@@ -236,8 +253,14 @@
     grid-gap: 110px
     font-size: 16px
     @media screen and (max-width: 1919px)
+      grid-gap: 45px
+
+
+
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
       grid-gap: 30px
+
 
   &__col
     display: block
@@ -246,7 +269,7 @@
 
 
     &.img
-      @media screen and (max-width: 1919px)
+      @media screen and (max-width: 1599px)
         min-height: 760px
         order: -1
       @media screen and (max-width: 1023px)
@@ -267,7 +290,9 @@
     @extend %fb
     margin-bottom: 25px
     @extend %lc
+    font-size: 18px
     @media screen and (max-width: 767px)
+      font-size: 12px
       gap: 10px
       span:last-child
         text-align: right
@@ -357,7 +382,7 @@
 
   &__slider
     margin-top: 80px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       margin-bottom: 80px
 
 
@@ -371,7 +396,7 @@
   background-color: $gray-light
   max-width: 650px
   margin: 0 15px
-  @media screen and (max-width: 1919px)
+  @media screen and (max-width: 1599px)
     max-width: 100%
     margin: 0
   @media screen and (max-width: 767px)
@@ -393,6 +418,10 @@
       flex-direction: column
 
 
+
+
+
+
     .btn
       height: 83px
       line-height: 83px
@@ -411,7 +440,7 @@
     overflow: hidden
     position: relative
     margin-bottom: 25px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       height: 180px
 
 
@@ -456,3 +485,4 @@
         background-color: $black
         width: 68px
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.38123 2.91633C8.11199 3.16269 7.96074 3.48585 7.96074 3.81475C7.96074 4.14366 8.11199 4.45138 8.38123 4.67024L15.4904 10.4473L8.38123 16.9501C8.11962 17.1974 7.97486 17.5181 7.97813 17.8431C7.9814 18.1682 8.13245 18.4716 8.39873 18.688C8.66501 18.9043 9.02522 19.0164 9.40179 19C9.77835 18.9836 10.1411 18.8401 10.412 18.6003L18.5365 11.1687C18.8058 10.9224 18.957 10.5992 18.957 10.2703C18.957 9.94138 18.8058 9.63366 18.5365 9.4148L10.412 2.81267C10.1427 2.59388 9.77745 2.48189 9.39662 2.50133C9.01579 2.52077 8.65056 2.67005 8.38123 2.91633Z' fill='white' /%3E%3C/svg%3E")
+

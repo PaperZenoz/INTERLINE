@@ -4,10 +4,44 @@
   background-repeat: no-repeat
   background-size: cover
   color: $white
+  @media screen and (max-width: 767px)
+    min-height: auto
+    background-color: $black
+    background-image: none
+
+
+
+  &__mob-title
+    display: none
+    cursor: pointer
+    font-size: 25px
+    @extend %600
+    justify-content: space-between
+    svg
+      flex-shrink: 0
+      align-self: flex-end
+      @extend %transition
+    @media screen and (max-width: 767px)
+      display: flex
+      
+
+  &__mob-title.open svg
+    rotate: 180deg
+
 
   &__wrap
     max-width: 760px
     font-size: 18px
+    @media screen and (max-width: 767px)
+      display: none
+      margin-top: 30px
+    .h1
+      @media screen and (max-width: 767px)
+        display: none
+
+
+
+
 
   .h1
     text-transform: inherit
@@ -58,9 +92,11 @@
       width: max-content
       cursor: pointer
       @media screen and (max-width: 1023px)
-        padding: 0 20px
+        padding: 0 15px
         font-size: 14px
-        margin-right: 10px
+        margin-right: 20px
+        height: 47px 
+        line-height: 47px
 
 
   &__radio-button
@@ -92,7 +128,7 @@
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 65px 35px
     margin-top: 50px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       grid-template-columns: repeat(2, 1fr)
       grid-gap: 30px
     @media screen and (max-width: 1023px)

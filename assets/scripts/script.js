@@ -13,7 +13,7 @@ $(document).ready(function () {
             dots: true,
             responsive: [
                 {
-                    breakpoint: 1920,
+                    breakpoint: 1600,
                     settings: {
                         slidesToShow: 1
                     }
@@ -42,7 +42,7 @@ $(document).ready(function () {
             dots: false,
             responsive: [
                 {
-                    breakpoint: 1920,
+                    breakpoint: 1600,
                     settings: {
                         slidesToShow: 2,
                         dots: true
@@ -68,17 +68,17 @@ $(document).ready(function () {
 
 
         $(window).resize(function () {
-            if ($(window).width() < 1920 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
+            if ($(window).width() < 1600 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
                 $('.catalog-general__wrap').slick({
                     dots: true
                 })
-            } else if ($(window).width() >= 1920 && $('.catalog-general__wrap').hasClass('slick-initialized')) {
+            } else if ($(window).width() >= 1600 && $('.catalog-general__wrap').hasClass('slick-initialized')) {
                 $('.catalog-general__wrap').slick('unslick')
             }
         });
 
 
-        if ($(window).width() < 1920 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
+        if ($(window).width() < 1600 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
             $('.catalog-general__wrap').slick({
                 dots: true
             })
@@ -86,12 +86,12 @@ $(document).ready(function () {
 
 
         $(window).resize(function () {
-            if ($(window).width() < 1920 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
+            if ($(window).width() < 1600 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
                 $('.product-card__mobile-gallery').slick({
                     slidesToShow: 1,
                     responsive: [
                         {
-                            breakpoint: 1920,
+                            breakpoint: 1600,
                             settings: {
                                 dots: true,
                                 lazyLoad: 'ondemand'
@@ -105,12 +105,12 @@ $(document).ready(function () {
 
         });
 
-        if ($(window).width() < 1920 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
+        if ($(window).width() < 1600 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
             $('.product-card__mobile-gallery').slick({
                 slidesToShow: 1,
                 responsive: [
                     {
-                        breakpoint: 1920,
+                        breakpoint: 1600,
                         settings: {
                             dots: true,
                             lazyLoad: 'ondemand'
@@ -266,6 +266,14 @@ $(document).ready(function () {
     }
 
 
+    function catalog_banner() {
+        $('.catalog-banner__mob-title').on('click', function () {
+            $('.catalog-banner__wrap').slideToggle()
+            $(this).toggleClass('open')
+        })
+    }
+
+
     sliders()
     up_btn()
     selects()
@@ -273,4 +281,5 @@ $(document).ready(function () {
     category_types()
     burger()
     myYandexMap()
+    catalog_banner()
 })

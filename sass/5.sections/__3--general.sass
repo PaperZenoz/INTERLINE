@@ -10,7 +10,7 @@
     grid-gap: 30px
     margin-bottom: 40px
     position: relative
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
 
   &__contacts
@@ -21,8 +21,15 @@
     flex-direction: column
     gap: 20px
     z-index: 2
-    @media screen and (max-width: 1919px)
-      display: none
+    @media screen and (max-width: 1023px)
+      svg
+        width: 45px
+        height: 45px
+
+
+
+
+
 
   &__content
     color: $white
@@ -63,13 +70,15 @@
         width: 100%
 
   &__form
-    width: 510px
-    background-color: rgba($white, 0.6)
+    //width: 510px
+    //background-color: rgba($white, 0.6)
     @include r(5px)
     padding: 40px
     margin-left: auto
-    height: max-content
-    @media screen and (max-width: 1919px)
+    //height: max-content
+    background-color: $black
+    color: white
+    @media screen and (max-width: 1599px)
       width: 100%
     @media screen and (max-width: 1023px)
       padding: 15px
@@ -104,7 +113,7 @@
     justify-content: space-between
     gap: 30px
     @extend %scrollbar
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       width: 920px
       overflow-y: hidden
       overflow-x: scroll
@@ -146,36 +155,50 @@
 .general-information
   background-color: $black
 
+
+  &__desck-title
+    @media screen and (max-width: 1023px)
+      display: none
+
+  &__mob-title
+    display: none
+    @media screen and (max-width: 1023px)
+      display: block
+
+
   &__wrap
     @extend %fb
     gap: 50px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       gap: 30px
     @media screen and (max-width: 1023px)
       display: grid
       grid-template-columns: repeat(2, 1fr)
-    @media screen and (max-width: 767px)
-      grid-template-columns: 1fr
+  //@media screen and (max-width: 767px)
+  //  grid-template-columns: 1fr
 
 
   &__item
     color: $white
     width: 225px
+    @media screen and (max-width: 767px)
+      width: 100%
+
 
     strong
       @extend %up
       font-size: 18px
       @extend %500
       @media screen and (max-width: 1023px)
-        font-size: 16px
+        font-size: 14px
 
 
     span
       font-size: 16px
       @media screen and (max-width: 1023px)
-        font-size: 14px
+        font-size: 12px
       @media screen and (max-width: 767px)
-        width: 185px
+        //width: 185px
         display: block
 
 
@@ -184,7 +207,7 @@
     font-size: 65px
     color: $red
     @media screen and (max-width: 1023px)
-      font-size: 40px
+      font-size: 35px
 
 
 .general-category
@@ -198,7 +221,7 @@
     padding: 0 30px
     position: relative
     display: none
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       display: block
 
 
@@ -227,13 +250,17 @@
     grid-template-columns: 430px auto
     grid-gap: 75px
     @media screen and (max-width: 1919px)
+      grid-gap: 45px
+
+
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
       grid-gap: 30px
 
 
   &__nav
     margin-bottom: 50px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       display: none
 
 
@@ -276,7 +303,7 @@
   &__form
     padding: 50px 25px
     background-color: $gray-light
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       display: none
 
 
@@ -301,7 +328,7 @@
     background-color: $gray-light
     max-width: 650px
     margin: 0 15px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       max-width: 100%
     @media screen and (max-width: 767px)
       padding: 15px
@@ -320,7 +347,7 @@
   &__item-buttons
     display: flex
     gap: 15px
-    @media screen and (max-width: 1023px)
+    @media screen and (max-width: 1919px)
       flex-direction: column
 
 
@@ -328,7 +355,7 @@
       height: 83px
       line-height: 83px
       min-width: 275px
-      @media screen and (max-width: 1023px)
+      @media screen and (max-width: 1919px)
         height: 56px
         line-height: 56px
         width: 100%
@@ -393,6 +420,7 @@
       @media screen and (max-width: 1023px)
         height: 66px
         line-height: 66px
+        padding: 0 15px
       @media screen and (max-width: 767px)
         width: 100%
 
@@ -414,6 +442,10 @@
 .general-category-slider
   width: 1315px
   @media screen and (max-width: 1919px)
+    width: 1065px
+
+
+  @media screen and (max-width: 1599px)
     width: 920px
   @media screen and (max-width: 1023px)
     width: 600px
@@ -424,7 +456,7 @@
 .general-leasing
 
   color: $white
-  @media screen and (max-width: 1919px)
+  @media screen and (max-width: 1599px)
     background-image: url("../../images/general-leasing/2.jpg")
     background-size: cover
 
@@ -434,8 +466,10 @@
     background-size: cover
     padding-top: 90px
     padding-bottom: 90px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       background-image: none
+      padding-top: 10px
+      padding-bottom: 10px
 
 
   &__title
@@ -482,13 +516,13 @@
     text-align: center
     font-size: 180px
     z-index: 0
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       display: none
 
   &__wrap
     margin-top: 50px
     margin-bottom: 200px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       margin-top: 0px
       margin-bottom: 60px
 
@@ -501,7 +535,7 @@
     z-index: 1
     @extend %transition
     opacity: 0
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       justify-content: center
       align-items: center
     @media screen and (max-width: 1023px)
@@ -513,7 +547,7 @@
 
     &:nth-child(1), &:nth-child(3)
       z-index: 3
-      @media screen and (max-width: 1919px)
+      @media screen and (max-width: 1599px)
         display: none
 
   &__item
@@ -524,7 +558,7 @@
     position: relative
     margin: 10px
     background-color: $white
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
       background-color: $transparent
       box-shadow: none
@@ -546,7 +580,7 @@
       z-index: 2
       pointer-events: none
       opacity: 1
-      @media screen and (max-width: 1919px)
+      @media screen and (max-width: 1599px)
         display: none
 
 
@@ -566,7 +600,7 @@
     text-align: center
     margin-top: 15px
     margin-bottom: 50px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       font-size: 16px
 
   &__img
@@ -608,7 +642,7 @@
     overflow-y: hidden
     background-color: #F6F6F6
     @extend %scrollbar
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       display: none
     @media screen and (max-width: 1023px)
       width: 600px
@@ -658,7 +692,7 @@
     background-image: url("../../images/general-company/1.jpg")
     background-size: cover
     margin-top: 75px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       background-image: none
       background-color: $black
     @media screen and (max-width: 767px)
@@ -672,6 +706,10 @@
     margin-left: auto
     padding: 60px 0
     @media screen and (max-width: 1919px)
+      width: 450px
+      padding: 45px 0
+
+    @media screen and (max-width: 1599px)
       width: 100%
     @media screen and (max-width: 1023px)
       padding: 30px 0
@@ -706,7 +744,7 @@
     grid-template-columns: repeat(2, 1fr)
     grid-gap: 30px
     margin-top: 100px
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
     @media screen and (max-width: 767px)
       margin-top: 30px
@@ -773,9 +811,10 @@
     grid-gap: 30px
     padding: 80px 100px
     background-color: $gray-light
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
     @media screen and (max-width: 1023px)
+      margin-top: 60px
       padding: 15px
 
 
@@ -889,7 +928,7 @@
   &__wrap
     margin-top: 70px
     display: flex
-    @media screen and (max-width: 1919px)
+    @media screen and (max-width: 1599px)
       flex-direction: column
       gap: 30px
 

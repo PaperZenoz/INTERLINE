@@ -1,0 +1,175 @@
+.content
+  font-size: 18px
+  @media screen and (max-width: 1599px)
+    font-size: 14px
+
+
+
+
+  img
+    width: 100%
+
+  .h3
+    font-size: 35px
+    margin-top: 40px
+    margin-bottom: 25px
+    @media screen and (max-width: 1599px)
+      font-size: 20px
+      margin-top: 20px
+      margin-bottom: 15px
+
+
+
+
+  a
+    text-decoration: underline
+    @extend %600
+
+  .btn
+    text-decoration: none
+
+
+.content-gallery
+  margin: 40px 0
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 15px
+  @media screen and (max-width: 1599px)
+    display: block
+
+  &__item
+    height: 640px
+    @media screen and (max-width: 1023px)
+      height: 195px
+
+
+.content-table
+  margin-bottom: 60px
+
+  &__item
+    @extend %fb
+    align-items: center
+    gap: 15px
+    padding: 15px 10px 5px
+    border-bottom: 1px dashed #DADADA
+    font-size: 16px
+    @media screen and (max-width: 1599px)
+      font-size: 12px
+
+
+
+    span:nth-child(2)
+      text-align: right
+
+    &:nth-child(even)
+      background-color: #F0F0F0
+
+
+.accordion
+  &__item
+    margin-bottom: 20px
+    background-color: #EFEFEF
+    padding: 40px
+    @media screen and (max-width: 1599px)
+    	padding: 15px
+    
+    	
+    
+
+  &__head
+    display: flex
+    flex-direction: column
+    position: relative
+    padding-right: 70px
+    min-height: 64px
+    @media screen and (max-width: 1599px)
+      min-height: 34px
+    
+    	
+    
+
+    &:before
+      content: ''
+      display: block
+      width: 64px
+      height: 64px
+      @include r(10px)
+      background-color: $red
+      position: absolute
+      right: 0
+      top: 0
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4672 0.857189C14.2579 0.662937 13.9833 0.553813 13.7039 0.553813C13.4244 0.553813 13.163 0.662937 12.977 0.857189L8.06884 5.98622L2.54401 0.857188C2.3339 0.668442 2.06142 0.564002 1.78525 0.566362C1.50908 0.568723 1.25131 0.677695 1.06747 0.869809C0.883629 1.06192 0.788422 1.32181 0.802353 1.59349C0.816283 1.86517 0.938238 2.1269 1.14195 2.32233L7.45588 8.18393C7.66519 8.37818 7.93974 8.4873 8.21919 8.4873C8.49863 8.4873 8.76007 8.37818 8.94601 8.18393L14.5552 2.32233C14.7411 2.12802 14.8363 1.86451 14.8197 1.58976C14.8032 1.315 14.6764 1.0515 14.4672 0.857189Z' fill='white'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: center
+      @extend %transition
+      @media screen and (max-width: 1599px)
+        width: 34px 
+        height: 34px
+        @include r(5px)
+
+
+
+
+    &.open:before
+      rotate: 180deg
+
+
+    strong
+      font-size: 20px
+      display: block
+      margin-bottom: 10px
+      @media screen and (max-width: 1599px)
+        font-size: 16px
+
+
+
+
+    span
+      font-size: 16px
+      color: #6B6B6B
+      @media screen and (max-width: 1599px)
+        font-size: 14px
+
+
+
+
+
+  &__body
+    border-top: 1px solid #DBDBDB
+    padding-top: 30px
+    margin-top: 30px
+    display: none
+
+
+.content-read
+  &__wrap
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 20px
+    @media screen and (max-width: 1599px)
+      display: block
+
+
+  &__item
+
+
+  &__img
+    height: 500px
+    margin-bottom: 30px
+    @media screen and (max-width: 1023px)
+      height: 310px
+
+
+  &__text
+    strong
+      display: block
+      margin-bottom: 10px
+
+    span
+      color: #8F8F8F
+      font-size: 16px
+      display: block
+      max-width: 415px
+      line-height: 1.4
+
+

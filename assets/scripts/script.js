@@ -85,6 +85,44 @@ $(document).ready(function () {
         }
 
 
+
+        $(window).resize(function () {
+            if ($(window).width() < 1600 && !$('.content-read__wrap').hasClass('slick-initialized')) {
+                $('.content-read__wrap').slick({
+                    dots: false
+                })
+            } else if ($(window).width() >= 1600 && $('.content-read__wrap').hasClass('slick-initialized')) {
+                $('.content-read__wrap').slick('unslick')
+            }
+        });
+
+
+        if ($(window).width() < 1600 && !$('.content-read__wrap').hasClass('slick-initialized')) {
+            $('.content-read__wrap').slick({
+                dots: false
+            })
+        }
+
+
+
+        $(window).resize(function () {
+            if ($(window).width() < 1600 && !$('.content-gallery').hasClass('slick-initialized')) {
+                $('.content-gallery').slick({
+                    dots: false
+                })
+            } else if ($(window).width() >= 1600 && $('.content-gallery').hasClass('slick-initialized')) {
+                $('.content-gallery').slick('unslick')
+            }
+        });
+
+
+        if ($(window).width() < 1600 && !$('.content-gallery').hasClass('slick-initialized')) {
+            $('.content-gallery').slick({
+                dots: false
+            })
+        }
+
+
         $(window).resize(function () {
             if ($(window).width() < 1600 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
                 $('.product-card__mobile-gallery').slick({
@@ -274,6 +312,15 @@ $(document).ready(function () {
     }
 
 
+    function accordion() {
+        $('.accordion__head').on('click', function () {
+            $(this).toggleClass('open')
+            $(this).siblings('.accordion__body').slideToggle()
+        })
+
+    }
+
+
     sliders()
     up_btn()
     selects()
@@ -282,4 +329,5 @@ $(document).ready(function () {
     burger()
     myYandexMap()
     catalog_banner()
+    accordion()
 })

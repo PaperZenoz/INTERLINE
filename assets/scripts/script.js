@@ -13,7 +13,7 @@ $(document).ready(function () {
             dots: true,
             responsive: [
                 {
-                    breakpoint: 1600,
+                    breakpoint: 1280,
                     settings: {
                         slidesToShow: 1
                     }
@@ -161,15 +161,15 @@ $(document).ready(function () {
         }
 
 
-        // $('.general-top-slider').on('afterChange', function (currentSlide) {
-        //     $('.general-top__column').addClass('active')
-        //     $('.general-top__item').addClass('active')
-        // });
-        //
-        // $('.general-top-slider').on('beforeChange', function (currentSlide) {
-        //     $('.general-top__column').removeClass('active')
-        //     $('.general-top__item').removeClass('active')
-        // });
+        $('.general-top-slider').on('afterChange', function (currentSlide) {
+            $('.general-top__column').addClass('active')
+            $('.general-top__item').addClass('active')
+        });
+
+        $('.general-top-slider').on('beforeChange', function (currentSlide) {
+            $('.general-top__column').removeClass('active')
+            $('.general-top__item').removeClass('active')
+        });
 
 
     }

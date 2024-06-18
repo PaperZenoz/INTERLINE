@@ -27,10 +27,6 @@
         height: 45px
 
 
-
-
-
-
   &__content
     color: $white
 
@@ -114,9 +110,13 @@
     gap: 30px
     @extend %scrollbar
     @media screen and (max-width: 1599px)
-      width: 920px
+      width: 100%
       overflow-y: hidden
       overflow-x: scroll
+    @media screen and (max-width: 1279px)
+      width: 920px
+
+
     @media screen and (max-width: 1023px)
       width: 600px
     @media screen and (max-width: 767px)
@@ -221,7 +221,7 @@
     padding: 0 30px
     position: relative
     display: none
-    @media screen and (max-width: 1599px)
+    @media screen and (max-width: 1279px)
       display: block
 
 
@@ -250,17 +250,18 @@
     grid-template-columns: 430px auto
     grid-gap: 75px
     @media screen and (max-width: 1919px)
+      grid-template-columns: 380px auto
       grid-gap: 45px
 
 
-    @media screen and (max-width: 1599px)
+    @media screen and (max-width: 1279px)
       grid-template-columns: 1fr
       grid-gap: 30px
 
 
   &__nav
     margin-bottom: 50px
-    @media screen and (max-width: 1599px)
+    @media screen and (max-width: 1279px)
       display: none
 
 
@@ -294,6 +295,7 @@
     background-color: $gray
     margin-right: 20px
     @extend %transition
+    flex-shrink: 0
     @media screen and (max-width: 767px)
       width: 65px
       height: 65px
@@ -368,14 +370,11 @@
 
 
   &__img
-    height: 360px
+    aspect-ratio: 600 / 350
     @include r(10px)
     overflow: hidden
     position: relative
     margin-bottom: 25px
-    @media screen and (max-width: 767px)
-      height: 180px
-
 
     img
       @extend %transition
@@ -446,7 +445,13 @@
 
 
   @media screen and (max-width: 1599px)
+    width: 795px
+  @media screen and (max-width: 1279px)
     width: 920px
+
+
+
+
   @media screen and (max-width: 1023px)
     width: 600px
   @media screen and (max-width: 767px)
@@ -459,6 +464,7 @@
   @media screen and (max-width: 1599px)
     background-image: url("../../images/general-leasing/2.jpg")
     background-size: cover
+    background-position: center
 
 
   &__bg
@@ -544,7 +550,6 @@
 
     &.active
       opacity: 1
-
     &:nth-child(1), &:nth-child(3)
       z-index: 3
       @media screen and (max-width: 1599px)
@@ -654,6 +659,7 @@
   color: $white
   background-image: url("../../images/general-services/1.jpg")
   background-size: cover
+  background-position: center
   @media screen and (max-width: 767px)
     background-image: url("../../images/general-services/2.jpg")
 
@@ -955,6 +961,9 @@
       margin-right: 0
       font-size: 14px
     
-    	
-    
 
+
+
+.fancybox-close-small
+  background: $red
+  color: white

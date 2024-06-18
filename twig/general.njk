@@ -8,7 +8,7 @@
         <div class="container">
             <div class="{{ _ }}__wrap">
                 <div class="{{ _ }}__content">
-                    <h1 class="h1">КИТАЙСКАЯ СПЕЦТЕХНИКА</h1>
+                    <h1 class="h1">КИТАЙСКАЯ <br> СПЕЦТЕХНИКА</h1>
                     <div class="{{ _ }}__list">
 
                         {% set  list = [
@@ -211,7 +211,7 @@
 
                                             </div>
                                             <div class="{{ _ }}__item-buttons">
-                                                <a href="#" class="btn btn--red">УЗНАТЬ СТОИМОСТЬ</a>
+                                                <a data-fancybox href="#popup--price" class="btn btn--red">УЗНАТЬ СТОИМОСТЬ</a>
                                                 <a href="#" class="btn">ПОДРОБНЕЕ</a>
 
                                             </div>
@@ -261,7 +261,7 @@
                         <a href="#" class="special-btn">УЗНАТЬ УСЛОВИЯ</a>
                     </div>
                 </div>
-            </div>
+            </div>  
 
         </div>
 
@@ -334,19 +334,15 @@
 
                     {% for item in list %}
                         <div class="{{ _ }}__item">
-                            <div class="{{ _ }}__item-icon">
-                                <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
-                            </div>
-                            <div class="{{ _ }}__item-text">
-                                {{ item }}
-                            </div>
+                            <div class="{{ _ }}__item-icon"><img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/></div>
+                            <div class="{{ _ }}__item-text">{{ item }}</div>
 
                         </div>
                     {% endfor %}
 
 
                 </div>
-                <a href="#" class="special-btn">ПОДРОБНЕЕ</a>
+                <a data-fancybox href="#popup--services" class="special-btn">ПОДРОБНЕЕ</a>
             </div>
         </div>
     </div>

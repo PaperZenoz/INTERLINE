@@ -13,7 +13,7 @@ $(document).ready(function () {
             dots: true,
             responsive: [
                 {
-                    breakpoint: 1280,
+                    breakpoint: 1024,
                     settings: {
                         slidesToShow: 1
                     }
@@ -85,7 +85,6 @@ $(document).ready(function () {
         }
 
 
-
         $(window).resize(function () {
             if ($(window).width() < 1600 && !$('.content-read__wrap').hasClass('slick-initialized')) {
                 $('.content-read__wrap').slick({
@@ -102,7 +101,6 @@ $(document).ready(function () {
                 dots: false
             })
         }
-
 
 
         $(window).resize(function () {
@@ -321,6 +319,14 @@ $(document).ready(function () {
     }
 
 
+    function price() {
+        $('.js--price').on('click', function () {
+            var $text = $(this).parents('.general-category__item').find('h4').text()
+                $('.popup--price strong').text($text)
+            console.log($text)
+        })
+    }
+
     sliders()
     up_btn()
     selects()
@@ -330,4 +336,5 @@ $(document).ready(function () {
     myYandexMap()
     catalog_banner()
     accordion()
+    price()
 })

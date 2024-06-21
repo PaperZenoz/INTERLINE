@@ -68,9 +68,9 @@
 
                             {% for item in list %}
                                 <label class="{{ _ }}__colors-item">
-                                    <input type="checkbox"
-                                           class="{{ _ }}__color  {% if loop.index == 3 %} {{ _ }}__color--white {% endif %}">
-                                    <div style="background-color: {{ item }}"></div>
+                                    <a href="#"
+                                       class="{{ _ }}__color  {% if loop.index == 3 %} {{ _ }}__color--white active{% endif %}"
+                                       style="background-color: {{ item }}"></a>
                                 </label>
                             {% endfor %}
 
@@ -126,7 +126,6 @@
     <div class="{{ _ }} section">
         <div class="container-lg">
             <div class="{{ _ }}__wrap-first">
-
 
 
                 <div class="{{ _ }}__col">

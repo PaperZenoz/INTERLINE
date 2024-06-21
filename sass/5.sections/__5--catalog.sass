@@ -4,11 +4,14 @@
   background-repeat: no-repeat
   background-size: cover
   color: $white
+  @media screen and (max-width: 1023px)
+    min-height: auto
+
+
   @media screen and (max-width: 767px)
     min-height: auto
     background-color: $black
     background-image: none
-
 
 
   &__mob-title
@@ -17,13 +20,15 @@
     font-size: 25px
     @extend %600
     justify-content: space-between
+
     svg
       flex-shrink: 0
       align-self: flex-end
       @extend %transition
+
     @media screen and (max-width: 767px)
       display: flex
-      
+
 
   &__mob-title.open svg
     rotate: 180deg
@@ -35,12 +40,10 @@
     @media screen and (max-width: 767px)
       display: none
       margin-top: 30px
+
     .h1
       @media screen and (max-width: 767px)
         display: none
-
-
-
 
 
   .h1
@@ -60,6 +63,7 @@
     @extend %fy
     margin-bottom: 35px
     @extend %lc
+    gap: 15px
     @media screen and (max-width: 1023px)
       flex-wrap: wrap
 
@@ -75,12 +79,8 @@
 
 
   &__radio-button
-    input
-      opacity: 0
-      position: absolute
-      z-index: -1
 
-    span
+    a
       height: 64px
       line-height: 64px
       color: $white
@@ -95,12 +95,12 @@
         padding: 0 15px
         font-size: 14px
         margin-right: 20px
-        height: 47px 
+        height: 47px
         line-height: 47px
 
 
   &__radio-button
-    input:checked + span
+    a.active
       background-color: $red
 
 
@@ -109,6 +109,7 @@
     margin-top: 80px
     @extend %fy
     gap: 60px
+    flex-wrap: wrap
     @media screen and (max-width: 1023px)
       flex-direction: column
       align-items: flex-start

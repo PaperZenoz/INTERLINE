@@ -187,7 +187,27 @@
                             <div class="{{ _ }}__list-item">
                                 <div class="{{ _ }}__slider general-category-slider custom-slick-arrow custom-slick-dots">
                                     {% for i in range(1, 5) %}
-                                        <div class="{{ _ }}__item">
+                                        <div class="{{ _ }}__item"
+                                                {% if loop.index == 1 %}
+                                                    data-type="1"
+                                                {% endif %}
+                                                {% if loop.index == 2 %}
+                                                    data-type="2"
+                                                {% endif %}
+                                                {% if loop.index == 3 %}
+                                                    data-type="1"
+                                                {% endif %}
+                                                {% if loop.index == 4 %}
+                                                    data-type="2"
+                                                {% endif %}
+                                                {% if loop.index == 5 %}
+                                                    data-type="1"
+                                                {% endif %}
+
+                                        >
+
+
+
                                             <h4 class="h4">ТЯГАЧ SHACMAN X 6000 4х2 480 л.с  {{ i }}</h4>
                                             <div class="{{ _ }}__sign">
                                                 FWGWHGBWHWH
@@ -490,8 +510,11 @@
                     <br> вас от киберпреступников.
 
                 </div>
-                <div class="{{ _ }}__list">
+                <div class="{{ _ }}__list custom-slick-arrow custom-slick-dots">
                     {% for i in range(1, 3) %}
+                        <div class="{{ _ }}__item">
+                            <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                        </div>
                         <div class="{{ _ }}__item">
                             <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
                         </div>

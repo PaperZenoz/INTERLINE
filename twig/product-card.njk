@@ -312,7 +312,7 @@
 
                         </div>
                         <div class="{{ _ }}__item-buttons">
-                            <a data-fancybox href="#popup--price" class="btn btn--red">УЗНАТЬ СТОИМОСТЬ</a>
+                            <a data-fancybox href="#popup--price" class="js--price-card btn btn--red">УЗНАТЬ СТОИМОСТЬ</a>
                             <a href="#" class="btn">ПОДРОБНЕЕ</a>
 
                         </div>
@@ -407,8 +407,11 @@
                     <br> вас от киберпреступников.
 
                 </div>
-                <div class="{{ _ }}__list">
+                <div class="{{ _ }}__list custom-slick-arrow custom-slick-dots">
                     {% for i in range(1, 3) %}
+                        <div class="{{ _ }}__item">
+                            <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                        </div>
                         <div class="{{ _ }}__item">
                             <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
                         </div>

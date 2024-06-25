@@ -65,7 +65,10 @@ $(document).ready(function () {
 
 
         })
-
+$('.general-brands__list').slick({
+    slidesToShow: 3,
+    arrows: true
+})
 
         $(window).resize(function () {
             if ($(window).width() < 1600 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
@@ -322,8 +325,42 @@ $(document).ready(function () {
     function price() {
         $('.js--price').on('click', function () {
             var $text = $(this).parents('.general-category__item').find('h4').text()
-                $('.popup--price strong').text($text)
+
+
+            $('#price_name').val($text)
+            $('.popup--price strong').text($text)
             console.log($text)
+        })
+    }
+
+    function price_card() {
+        $('.js--price-card').on('click', function () {
+            var $text = $(this).parents('.card').find('h4').text()
+
+
+            $('#price_name').val($text)
+            $('.popup--price strong').text($text)
+            console.log($text)
+        })
+    }
+
+
+    function filter() {
+        var $types = $('.general-category__nav-item'),
+            $items = $('.general-category__item'),
+            $container = $('.general-category__slider')
+
+
+        $types.on('click', function () {
+            var $index = $(this).index()
+
+
+            $items.hide()
+            $items.each(function () {
+                $items.eq($index).show()
+            })
+
+
         })
     }
 
@@ -337,4 +374,6 @@ $(document).ready(function () {
     catalog_banner()
     accordion()
     price()
+    // filter()
+    price_card()
 })

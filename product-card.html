@@ -300,8 +300,8 @@
                         </div>
                     </div>
                     <div class="product-card__buttons">
-                        <a href="#" class="btn btn--red">ПОЛУЧИТЬ КП СЕЙЧАС</a>
-                        <a href="#" class="btn btn--transparent">ЗАДАТЬ ВОПРОС</a>
+                        <a href="#popup--kp" data-fancybox class="btn btn--red">ПОЛУЧИТЬ КП СЕЙЧАС</a>
+                        <a href="#popup--callback" data-fancybox class="btn btn--transparent">ЗАДАТЬ ВОПРОС</a>
                         <a href="#" class="product-card__whatsapp">
                             <svg width="43" height="44" viewBox="0 0 43 44" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -343,7 +343,7 @@
 
                     </div>
 
-                    <a href="#" class="btn btn--black">ПОЛУЧИТЬ РАСЧЕТ ЛИЗИНГА</a>
+                    <a href="#popup--price" data-fancybox class="btn btn--black">ПОЛУЧИТЬ РАСЧЕТ ЛИЗИНГА</a>
                 </div>
             </div>
         </div>
@@ -1024,8 +1024,26 @@
 
     <br>
 
+
+
+
+
     <div class="popup popup--callback" id="popup--callback">
         <h2 class="h2">Заказать звонок</h2>
+        <div class="popup__form">
+
+            <span>Оставьте свои данные и наш менеджер <br>  свяжется с вами в ближайшее время</span>
+            <input type="text" class="input js--tel" placeholder="Телефон">
+            <input type="text" class="input" placeholder="Email">
+            <button class="btn btn--red">Заказать звонок</button>
+        </div>
+    </div>
+
+    <br>
+
+
+    <div class="popup popup--callback" id="popup--kp">
+        <h2 class="h2">ПОЛУЧИТЬ КП СЕЙЧАС</h2>
         <div class="popup__form">
 
             <span>Оставьте свои данные и наш менеджер <br>  свяжется с вами в ближайшее время</span>

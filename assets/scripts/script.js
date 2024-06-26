@@ -324,23 +324,26 @@ $('.general-brands__list').slick({
 
     function price() {
         $('.js--price').on('click', function () {
-            var $text = $(this).parents('.general-category__item').find('h4').text()
+            var $text = $(this).parents('.general-category__item').find('h4').text(),
+                $img = $(this).parents('.general-category__item').find('.general-category__img > img').attr("src")
 
 
             $('#price_name').val($text)
             $('.popup--price strong').text($text)
-            console.log($text)
+            $('.popup--price .popup__img img').attr("src" , $img)
+
         })
     }
 
     function price_card() {
         $('.js--price-card').on('click', function () {
-            var $text = $(this).parents('.card').find('h4').text()
+            var $text = $(this).parents('.card').find('h4').text(),
+                $img = $(this).parents('.card').find('.card__img > img').attr("src")
 
 
             $('#price_name').val($text)
             $('.popup--price strong').text($text)
-            console.log($text)
+            $('.popup--price .popup__img img').attr("src" , $img)
         })
     }
 

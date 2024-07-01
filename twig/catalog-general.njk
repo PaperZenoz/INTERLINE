@@ -38,11 +38,12 @@
 
                 {% for item in list %}
                     <div class="{{ _ }}__item">
-                        <h4 class="h4">{{ item }}</h4>
-                        <div class="{{ _ }}__img img img--contain">
+                        <a href="#"><h4 class="h4">{{ item }}</h4></a>
+
+                        <a href="#" class="{{ _ }}__img img img--contain">
                             <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
 
-                        </div>
+                        </a>
                         <a href="#" class="btn btn--black">ПОДРОБНЕЕ</a>
                     </div>
                 {% endfor %}

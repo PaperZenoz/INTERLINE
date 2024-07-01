@@ -336,6 +336,12 @@
       padding: 15px
       margin: 0
 
+    .h4
+      @extend %transition
+
+      &:hover
+        color: $red
+
 
   &__sign
     font-size: 14px
@@ -370,6 +376,7 @@
 
 
   &__img
+    display: block
     aspect-ratio: 600 / 350
     @include r(10px)
     overflow: hidden
@@ -448,8 +455,6 @@
     width: 795px
   @media screen and (max-width: 1279px)
     width: 920px
-
-
 
 
   @media screen and (max-width: 1023px)
@@ -550,6 +555,7 @@
 
     &.active
       opacity: 1
+
     &:nth-child(1), &:nth-child(3)
       z-index: 3
       @media screen and (max-width: 1599px)
@@ -941,6 +947,7 @@
   &__item
     img
       margin: 0 auto
+
     @media screen and (max-width: 1023px)
       img
         width: 170px
@@ -958,13 +965,6 @@
       width: 100%
 
 
-
-
-
-
-
-
-
   &__text
     max-width: 505px
     margin-right: 70px
@@ -973,8 +973,6 @@
     @media screen and (max-width: 1023px)
       margin-right: 0
       font-size: 14px
-    
-
 
 
 .fancybox-close-small

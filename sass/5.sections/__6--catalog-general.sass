@@ -24,6 +24,9 @@
     .h4
       margin-bottom: 50px
       @extend %up
+      @extend %transition
+      &:hover
+          color: $red
       @media screen and (max-width: 1919px)
         font-size: 20px
       @media screen and (max-width: 767px)
@@ -51,4 +54,8 @@
   &__img
     height: 270px
     width: 100%
+    display: block
+    @extend %transition
+    &:hover
+      scale: 1.1
 

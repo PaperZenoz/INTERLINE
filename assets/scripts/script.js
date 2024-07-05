@@ -65,10 +65,10 @@ $(document).ready(function () {
 
 
         })
-$('.general-brands__list').slick({
-    slidesToShow: 3,
-    arrows: true
-})
+        $('.general-brands__list').slick({
+            slidesToShow: 3,
+            arrows: true
+        })
 
         $(window).resize(function () {
             if ($(window).width() < 1600 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
@@ -330,7 +330,7 @@ $('.general-brands__list').slick({
 
             $('#price_name').val($text)
             $('.popup--price strong').text($text)
-            $('.popup--price .popup__img img').attr("src" , $img)
+            $('.popup--price .popup__img img').attr("src", $img)
 
         })
     }
@@ -340,11 +340,32 @@ $('.general-brands__list').slick({
             var $text = $(this).parents('.card').find('h4').text(),
                 $img = $(this).parents('.card').find('.card__img > img').attr("src")
 
-
-            $('#price_name').val($text)
+            $('.popup--price').find('h2').text('Узнать стоимость')
             $('.popup--price strong').text($text)
-            $('.popup--price .popup__img img').attr("src" , $img)
+            $('.popup--price .popup__img img').attr("src", $img)
         })
+    }
+
+    function price_product() {
+
+        $('.js--price-product').on('click', function () {
+            var $text = $(this).text(),
+                $img = $(this).parents('.product-card').find('.product-card__general-img > img').attr("src"),
+                $title = $('.product-card__title').text()
+
+            //Заголовок
+            $('.popup--price').find('h2').text($text)
+
+            //Картинка
+            $('.popup--price .popup__img img').attr("src", $img)
+            //Название
+            $('#price_name').val($title)
+            console.log($title)
+            $('#price_title').text($title)
+
+        })
+
+
     }
 
 
@@ -379,4 +400,5 @@ $('.general-brands__list').slick({
     price()
     // filter()
     price_card()
+    price_product()
 })

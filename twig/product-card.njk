@@ -34,7 +34,7 @@
                 </div>
                 <div class="{{ _ }}__gallery">
                     <a data-fancybox href="images/{{ _ }}/1.jpg" class="{{ _ }}__general-img img">
-                        <img src="images/{{ _ }}/1.jpg" alt=""/>
+                        <img id="general_img" src="images/{{ _ }}/1.jpg" alt=""/>
                     </a>
                     <div class="{{ _ }}__img-list">
                         {% for i in range(2, 5) %}
@@ -77,9 +77,14 @@
 
                         </div>
                     </div>
+
+
+
+
+
                     <div class="{{ _ }}__buttons">
-                        <a href="#popup--price" data-fancybox class="js--price-product btn btn--red">Получить КП сейчас</a>
-                        <a href="#popup--price" data-fancybox class="js--price-product btn btn--transparent">Задать вопрос</a>
+                        <a href="#popup--kp" data-fancybox class="js--price-product btn btn--red">Получить КП сейчас</a>
+                        <a href="#popup--question" data-fancybox class="js--price-product btn btn--transparent">Задать вопрос</a>
                         <a href="#" class="{{ _ }}__whatsapp">
                             <svg width="43" height="44" viewBox="0 0 43 44" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +110,7 @@
 
                     </div>
 
-                    <a href="#popup--price" data-fancybox class="js--price-product btn btn--black">Получить расчет лизинга</a>
+                    <a href="#popup--leasing" data-fancybox class="js--price-product btn btn--black">Получить расчет лизинга</a>
                 </div>
             </div>
         </div>

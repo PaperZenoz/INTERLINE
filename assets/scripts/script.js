@@ -347,22 +347,22 @@ $(document).ready(function () {
     }
 
     function price_product() {
+        var $text = $(this).text(),
+            $img = $('#general_img').attr("src"),
+            $title = $('.product-card__title').text()
+         
+        //Заголовок
+        // $('.popup--price').find('h2').text($text)
+
+        //Картинка
+        $('.popup--price .popup__img img').attr("src", $img)
+
+        //Название
+        $('.price_name').val($title)
+        $('.price_title').text($title)
+
 
         $('.js--price-product').on('click', function () {
-            var $text = $(this).text(),
-                $img = $(this).parents('.product-card').find('.product-card__general-img > img').attr("src"),
-                $title = $('.product-card__title').text()
-
-            //Заголовок
-            $('.popup--price').find('h2').text($text)
-
-            //Картинка
-            $('.popup--price .popup__img img').attr("src", $img)
-            //Название
-            $('#price_name').val($title)
-            console.log($title)
-            $('#price_title').text($title)
-
         })
 
 

@@ -21,16 +21,18 @@
     @media screen and (max-width: 1919px)
       grid-template-columns: 750px auto
       grid-gap: 45px
+      zoom: 0.8
 
 
-    @media screen and (max-width: 1599px)
+    @media screen and (max-width: 1279px)
       grid-template-columns: 1fr
       grid-gap: 100px
+      zoom: 1
 
 
   &__mobile-gallery
     display: none
-    @media screen and (max-width: 1599px)
+    @media screen and (max-width: 1279px)
       display: block
       width: 920px
     @media screen and (max-width: 1023px)
@@ -47,7 +49,7 @@
       height: 240px
 
   &__gallery
-    @media screen and (max-width: 1599px)
+    @media screen and (max-width: 1279px)
       display: none
 
   &__general-img
@@ -217,11 +219,17 @@
       grid-gap: 45px
       grid-template-columns: 750px auto
 
-
     @media screen and (max-width: 1599px)
+      grid-template-columns: 1fr 1fr
+
+    @media screen and (max-width: 1279px)
       grid-template-columns: 1fr
       grid-gap: 20px
       margin-bottom: 30px
+
+
+
+
 
 
     p
@@ -239,8 +247,15 @@
       grid-template-columns: auto 750px
       grid-gap: 45px
 
-
     @media screen and (max-width: 1599px)
+      grid-template-columns: 1fr 1fr
+
+
+
+
+
+
+    @media screen and (max-width: 1279px)
       grid-template-columns: 1fr
       grid-gap: 30px
 
@@ -252,7 +267,7 @@
 
 
     &.img
-      @media screen and (max-width: 1599px)
+      @media screen and (max-width: 1279px)
         min-height: 760px
         order: -1
       @media screen and (max-width: 1023px)
@@ -415,6 +430,7 @@
     overflow: hidden
     position: relative
     margin-bottom: 25px
+    display: block
     @media screen and (max-width: 1599px)
       height: 180px
 

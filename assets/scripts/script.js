@@ -71,17 +71,17 @@ $(document).ready(function () {
         })
 
         $(window).resize(function () {
-            if ($(window).width() < 1600 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
+            if ($(window).width() < 1280 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
                 $('.catalog-general__wrap').slick({
                     dots: true
                 })
-            } else if ($(window).width() >= 1600 && $('.catalog-general__wrap').hasClass('slick-initialized')) {
+            } else if ($(window).width() >= 1280 && $('.catalog-general__wrap').hasClass('slick-initialized')) {
                 $('.catalog-general__wrap').slick('unslick')
             }
         });
 
 
-        if ($(window).width() < 1600 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
+        if ($(window).width() < 1280 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
             $('.catalog-general__wrap').slick({
                 dots: true
             })
@@ -125,12 +125,12 @@ $(document).ready(function () {
 
 
         $(window).resize(function () {
-            if ($(window).width() < 1600 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
+            if ($(window).width() < 1280 && !$('.product-card__mobile-gallery').hasClass('slick-initialized')) {
                 $('.product-card__mobile-gallery').slick({
                     slidesToShow: 1,
                     responsive: [
                         {
-                            breakpoint: 1600,
+                            breakpoint: 1280,
                             settings: {
                                 dots: true,
                                 lazyLoad: 'ondemand'
@@ -350,19 +350,20 @@ $(document).ready(function () {
         var $text = $(this).text(),
             $img = $('#general_img').attr("src"),
             $title = $('.product-card__title').text()
-         
+
         //Заголовок
         // $('.popup--price').find('h2').text($text)
 
-        //Картинка
-        $('.popup--price .popup__img img').attr("src", $img)
 
-        //Название
-        $('.price_name').val($title)
-        $('.price_title').text($title)
 
 
         $('.js--price-product').on('click', function () {
+            //Картинка
+            $('.popup--price .popup__img img').attr("src", $img)
+
+            //Название
+            $('.price_name').val($title)
+            $('.price_title').text($title)
         })
 
 

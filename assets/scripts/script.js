@@ -213,10 +213,9 @@ $(document).ready(function () {
             $block = $('.general-category__list-item')
 
 
-        setTimeout(function () {
-            $block.hide()
-            $block.eq(0).show()
-        }, 2000)
+
+        $block.addClass('hide')
+        $block.eq(0).removeClass('hide')
 
 
         $button.on('click', function () {
@@ -226,8 +225,8 @@ $(document).ready(function () {
             $button.removeClass('active')
             $(this).addClass('active')
 
-            $block.hide()
-            $block.eq($index).show()
+            $block.addClass('hide')
+            $block.eq($index).removeClass('hide')
         })
     }
 

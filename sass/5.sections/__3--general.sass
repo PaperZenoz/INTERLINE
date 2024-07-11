@@ -382,13 +382,14 @@
     display: block
     aspect-ratio: 600 / 350
     @include r(10px)
-    overflow: hidden
+    //overflow: hidden
     position: relative
     margin-bottom: 25px
 
     img
       @extend %transition
       filter: grayscale(100%)
+      @include r(10px)
 
     &:hover img
       filter: grayscale(0)
@@ -402,6 +403,21 @@
     width: 28px
     height: 28px
     @include r(50%)
+    @extend %transition
+    &:hover
+        .general-category__tooltip-content
+          display: block
+
+  &__tooltip-content
+    background-color: $white
+    padding: 15px
+    box-shadow: -1px 7px 8px 0px rgba(99, 101, 103, 0.2)
+    width: 250px
+    position: absolute
+    right: 0
+    font-size: 12px
+    @include r(10px)
+    display: none
 
   &__content
     margin-bottom: 30px

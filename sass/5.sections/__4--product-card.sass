@@ -16,10 +16,10 @@
 
   &__wrap
     display: grid
-    grid-template-columns: 900px auto
+    grid-template-columns: 1fr 1fr
     grid-gap: 110px
     @media screen and (max-width: 1919px)
-      grid-template-columns: 750px auto
+      //grid-template-columns: 750px auto
       grid-gap: 45px
       zoom: 0.8
 
@@ -122,12 +122,12 @@
 
 
   &__color.active
-      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00015 16.17L5.53015 12.7C5.34317 12.513 5.08957 12.408 4.82515 12.408C4.56072 12.408 4.30712 12.513 4.12015 12.7C3.93317 12.887 3.82813 13.1406 3.82812 13.405C3.82813 13.5359 3.85391 13.6656 3.90402 13.7865C3.95412 13.9075 4.02756 14.0174 4.12015 14.11L8.30015 18.29C8.69015 18.68 9.32015 18.68 9.71015 18.29L20.2901 7.71C20.4771 7.52302 20.5822 7.26943 20.5822 7.005C20.5822 6.74057 20.4771 6.48698 20.2901 6.3C20.1032 6.11302 19.8496 6.00798 19.5851 6.00798C19.3207 6.00798 19.0671 6.11302 18.8801 6.3L9.00015 16.17Z' fill='white'/%3E%3C/svg%3E%0A")
-      background-position: center
-      background-repeat: no-repeat
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00015 16.17L5.53015 12.7C5.34317 12.513 5.08957 12.408 4.82515 12.408C4.56072 12.408 4.30712 12.513 4.12015 12.7C3.93317 12.887 3.82813 13.1406 3.82812 13.405C3.82813 13.5359 3.85391 13.6656 3.90402 13.7865C3.95412 13.9075 4.02756 14.0174 4.12015 14.11L8.30015 18.29C8.69015 18.68 9.32015 18.68 9.71015 18.29L20.2901 7.71C20.4771 7.52302 20.5822 7.26943 20.5822 7.005C20.5822 6.74057 20.4771 6.48698 20.2901 6.3C20.1032 6.11302 19.8496 6.00798 19.5851 6.00798C19.3207 6.00798 19.0671 6.11302 18.8801 6.3L9.00015 16.17Z' fill='white'/%3E%3C/svg%3E%0A")
+    background-position: center
+    background-repeat: no-repeat
 
   &__color--white.active
-      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00015 16.17L5.53015 12.7C5.34317 12.513 5.08957 12.408 4.82515 12.408C4.56072 12.408 4.30712 12.513 4.12015 12.7C3.93317 12.887 3.82813 13.1406 3.82812 13.405C3.82813 13.5359 3.85391 13.6656 3.90402 13.7865C3.95412 13.9075 4.02756 14.0174 4.12015 14.11L8.30015 18.29C8.69015 18.68 9.32015 18.68 9.71015 18.29L20.2901 7.71C20.4771 7.52302 20.5822 7.26943 20.5822 7.005C20.5822 6.74057 20.4771 6.48698 20.2901 6.3C20.1032 6.11302 19.8496 6.00798 19.5851 6.00798C19.3207 6.00798 19.0671 6.11302 18.8801 6.3L9.00015 16.17Z' fill='black'/%3E%3C/svg%3E%0A")
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00015 16.17L5.53015 12.7C5.34317 12.513 5.08957 12.408 4.82515 12.408C4.56072 12.408 4.30712 12.513 4.12015 12.7C3.93317 12.887 3.82813 13.1406 3.82812 13.405C3.82813 13.5359 3.85391 13.6656 3.90402 13.7865C3.95412 13.9075 4.02756 14.0174 4.12015 14.11L8.30015 18.29C8.69015 18.68 9.32015 18.68 9.71015 18.29L20.2901 7.71C20.4771 7.52302 20.5822 7.26943 20.5822 7.005C20.5822 6.74057 20.4771 6.48698 20.2901 6.3C20.1032 6.11302 19.8496 6.00798 19.5851 6.00798C19.3207 6.00798 19.0671 6.11302 18.8801 6.3L9.00015 16.17Z' fill='black'/%3E%3C/svg%3E%0A")
 
   &__buttons
     display: flex
@@ -228,10 +228,6 @@
       margin-bottom: 30px
 
 
-
-
-
-
     p
       margin-bottom: 25px
 
@@ -251,10 +247,6 @@
       grid-template-columns: 1fr 1fr
 
 
-
-
-
-
     @media screen and (max-width: 1279px)
       grid-template-columns: 1fr
       grid-gap: 30px
@@ -265,7 +257,6 @@
     @media screen and (max-width: 767px)
       font-size: 12px
 
-
     &.img
       @media screen and (max-width: 1279px)
         min-height: 760px
@@ -274,6 +265,19 @@
         min-height: 500px
       @media screen and (max-width: 767px)
         min-height: 260px
+
+    > div
+      border-bottom: 1px dotted #DADADA
+      @extend %fb
+      margin-bottom: 25px
+      @extend %lc
+      font-size: 18px
+      gap: 15px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+        gap: 10px
+        span:last-child
+          text-align: right
 
 
   &__col .h3
@@ -284,16 +288,6 @@
       font-size: 20px
 
   &__row
-    border-bottom: 1px dotted #DADADA
-    @extend %fb
-    margin-bottom: 25px
-    @extend %lc
-    font-size: 18px
-    @media screen and (max-width: 767px)
-      font-size: 12px
-      gap: 10px
-      span:last-child
-        text-align: right
 
 
 .product-video
@@ -427,7 +421,7 @@
   &__img
     height: 360px
     @include r(10px)
-    overflow: hidden
+    //overflow: hidden
     position: relative
     margin-bottom: 25px
     display: block
@@ -438,6 +432,7 @@
     img
       @extend %transition
       filter: grayscale(100%)
+      @include r(10px)
 
     &:hover img
       filter: grayscale(0)
@@ -451,9 +446,26 @@
     width: 28px
     height: 28px
     @include r(50%)
+    @extend %transition
+
+    &:hover
+      .card__tooltip-content
+        display: block
+
+  &__tooltip-content
+    background-color: $white
+    padding: 15px
+    box-shadow: -1px 7px 8px 0px rgba(99, 101, 103, 0.2)
+    width: 250px
+    position: absolute
+    right: 0
+    display: none
+    font-size: 12px
+    @include r(10px)
 
   &__content
     margin-bottom: 30px
+    height: 120px
 
   &__content-item
     display: flex
@@ -476,4 +488,7 @@
         background-color: $black
         width: 68px
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.38123 2.91633C8.11199 3.16269 7.96074 3.48585 7.96074 3.81475C7.96074 4.14366 8.11199 4.45138 8.38123 4.67024L15.4904 10.4473L8.38123 16.9501C8.11962 17.1974 7.97486 17.5181 7.97813 17.8431C7.9814 18.1682 8.13245 18.4716 8.39873 18.688C8.66501 18.9043 9.02522 19.0164 9.40179 19C9.77835 18.9836 10.1411 18.8401 10.412 18.6003L18.5365 11.1687C18.8058 10.9224 18.957 10.5992 18.957 10.2703C18.957 9.94138 18.8058 9.63366 18.5365 9.4148L10.412 2.81267C10.1427 2.59388 9.77745 2.48189 9.39662 2.50133C9.01579 2.52077 8.65056 2.67005 8.38123 2.91633Z' fill='white' /%3E%3C/svg%3E")
+
+  .h4
+    height: 60px
 

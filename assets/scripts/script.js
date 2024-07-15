@@ -73,7 +73,8 @@ $(document).ready(function () {
         $(window).resize(function () {
             if ($(window).width() < 1280 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
                 $('.catalog-general__wrap').slick({
-                    dots: true
+                    dots: true,
+                    infinite: false
                 })
             } else if ($(window).width() >= 1280 && $('.catalog-general__wrap').hasClass('slick-initialized')) {
                 $('.catalog-general__wrap').slick('unslick')
@@ -83,7 +84,8 @@ $(document).ready(function () {
 
         if ($(window).width() < 1280 && !$('.catalog-general__wrap').hasClass('slick-initialized')) {
             $('.catalog-general__wrap').slick({
-                dots: true
+                dots: true,
+                infinite: false
             })
         }
 

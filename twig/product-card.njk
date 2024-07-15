@@ -189,12 +189,15 @@
                         subtitle: 'WEICHAI WP13.550Е501'
                     }] %}
 
-                    {% for item in list %}
-                        <div>
-                            <span>{{ item.title }}</span>
-                            <span>{{ item.subtitle }}</span>
-                        </div>
-                    {% endfor %}
+                    <table>
+                        {% for item in list %}
+                            <tr>
+                                <td>{{ item.title }}</td>
+                                <td>{{ item.subtitle }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+
 
                 </div>
                 <a data-fancybox href="images/{{ _ }}/2.jpg" class="{{ _ }}__col img">

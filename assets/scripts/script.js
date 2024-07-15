@@ -213,7 +213,6 @@ $(document).ready(function () {
             $block = $('.general-category__list-item')
 
 
-
         $block.addClass('hide')
         $block.eq(0).removeClass('hide')
 
@@ -222,11 +221,38 @@ $(document).ready(function () {
             var $index = $(this).index()
 
 
-            $button.removeClass('active')
-            $(this).addClass('active')
+            $button.not(this).removeClass('active')
+            $(this).toggleClass('active')
 
             $block.addClass('hide')
             $block.eq($index).removeClass('hide')
+        })
+    }
+
+
+    function category_mobile() {
+        var $general = $('.general-category__types'),
+            $text = $('.general-category__types-text'),
+            $img = $('.general-category__types-img')
+
+
+        $('.general-category__nav-item').on('click', function () {
+
+
+            //картинка
+
+
+            //текст
+
+            if ($(this).hasClass('active')) {
+                $img.show()
+                $img.find('img').attr("src", $(this).find('.general-category__nav-icon > img').attr("src"))
+                $text.text($(this).find('.general-category__nav-text').text())
+            } else {
+                $text.text('Тип машин')
+                $img.hide()
+            }
+
         })
     }
 
@@ -354,8 +380,6 @@ $(document).ready(function () {
         // $('.popup--price').find('h2').text($text)
 
 
-
-
         $('.js--price-product').on('click', function () {
             //Картинка
             $('.popup--price .popup__img img').attr("src", $img)
@@ -392,6 +416,7 @@ $(document).ready(function () {
     up_btn()
     selects()
     category()
+    category_mobile()
     category_types()
     burger()
     myYandexMap()

@@ -215,6 +215,15 @@
     grid-gap: 110px
     font-size: 16px
     margin-bottom: 100px
+    table
+      width: 100%
+    td
+      border-bottom: 1px dotted #DADADA
+      font-size: 18px
+      padding: 3px
+      &:last-child
+        text-align: right
+        padding-top: 25px
     @media screen and (max-width: 1919px)
       grid-gap: 45px
       grid-template-columns: 750px auto
@@ -426,7 +435,14 @@
     margin-bottom: 25px
     display: block
     @media screen and (max-width: 1599px)
+      height: 350px
+
+    @media screen and (max-width: 1279px)
       height: 180px
+
+
+
+
 
 
     img

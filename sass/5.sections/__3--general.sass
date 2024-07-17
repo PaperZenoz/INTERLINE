@@ -398,6 +398,8 @@
       @extend %transition
       filter: grayscale(100%)
       @include r(10px)
+      @media screen and (max-width: 1279px)
+        filter: grayscale(0)
 
     &:hover img
       filter: grayscale(0)

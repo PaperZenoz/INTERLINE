@@ -414,6 +414,20 @@ $(document).ready(function () {
         })
     }
 
+
+    function header() {
+
+        $(window).on("scroll", function () {
+            var $header = $('.header-bottom')
+
+            if ($(window).scrollTop() > 195) {
+                $header.addClass('show')
+            } else {
+                $header.removeClass('show')
+            }
+        });
+    }
+
     sliders()
     up_btn()
     selects()
@@ -428,4 +442,5 @@ $(document).ready(function () {
     // filter()
     price_card()
     price_product()
+    header()
 })

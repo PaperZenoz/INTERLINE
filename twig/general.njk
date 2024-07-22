@@ -2,75 +2,149 @@
 {% extends "./2.parts/main.njk" %}
 {% block content %}
 
+{% set  _ = 'general-slider' %}
+    <div class="{{_}}">
+        {% set  _ = 'general-banner' %}
+        <div class="{{ _ }} section">
+            <div class="container">
+                <div class="{{ _ }}__wrap">
+                    <div class="{{ _ }}__content">
+                        <h1 class="h1">КИТАЙСКАЯ <br> СПЕЦТЕХНИКА</h1>
+                        <div class="{{ _ }}__list">
 
-    {% set  _ = 'general-banner' %}
-    <div class="{{ _ }} section">
-        <div class="container">
-            <div class="{{ _ }}__wrap">
-                <div class="{{ _ }}__content">
-                    <h1 class="h1">КИТАЙСКАЯ <br> СПЕЦТЕХНИКА</h1>
-                    <div class="{{ _ }}__list">
+                            {% set  list = [
+                                'Прямые поставки из Китая',
+                                'Техническая поддержка',
+                                'Лизинг'] %}
 
-                        {% set  list = [
-                            'Прямые поставки из Китая',
-                            'Техническая поддержка',
-                            'Лизинг'] %}
-
-                        {% for item in list %}
-                            <div class="{{ _ }}__item">
-                                <div class="{{ _ }}__item-icon">
-                                    <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
+                            {% for item in list %}
+                                <div class="{{ _ }}__item">
+                                    <div class="{{ _ }}__item-icon">
+                                        <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
+                                    </div>
+                                    <div class="{{ _ }}__item-text">
+                                        {{ item }}
+                                    </div>
                                 </div>
-                                <div class="{{ _ }}__item-text">
-                                    {{ item }}
-                                </div>
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
 
+
+                        </div>
+
+                        <div class="{{ _ }}__buttons">
+                            <a data-fancybox href="#popup--action" class="special-btn">УЗНАТЬ О СКИДКАХ</a>
+                            <a href="#" class="special-btn special-btn--second">ПЕРЕЙТИ В КАТАЛОГ</a>
+
+                        </div>
 
                     </div>
+                    {#                <div class="{{ _ }}__form">#}
+                    {#                    <h2 class="{{ _ }}__form-title">#}
+                    {#                        Выгодный лизинг#}
+                    {#                    </h2>#}
+                    {#                                        <div class="{{ _ }}__model"> #}
+                    {#                                            <span>Выберите модель</span> #}
+                    {#                                        </div> #}
 
-                    <div class="{{ _ }}__buttons">
-                        <a data-fancybox href="#popup--action" class="special-btn">УЗНАТЬ О СКИДКАХ</a>
-                        <a href="#" class="special-btn special-btn--second">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    {#                    <input type="text" class="input js--tel" placeholder="Телефон">#}
+                    {#                    <input type="text" class="input" placeholder="Email">#}
+                    {#                    <a href="#" class="btn" style="width: 100%">Заявка на просчет</a>#}
 
-                    </div>
+                    {#                </div>#}
 
                 </div>
-                {#                <div class="{{ _ }}__form">#}
-                {#                    <h2 class="{{ _ }}__form-title">#}
-                {#                        Выгодный лизинг#}
-                {#                    </h2>#}
-                {#                                        <div class="{{ _ }}__model"> #}
-                {#                                            <span>Выберите модель</span> #}
-                {#                                        </div> #}
+                <div class="{{ _ }}__types">
+                    {% set  list = [
+                        'САМОСВАЛЫ',
+                        'ТЯГАЧИ',
+                        'Автобетоносмесители',
+                        'Автобусы',
+                        'Катки'] %}
 
-                {#                    <input type="text" class="input js--tel" placeholder="Телефон">#}
-                {#                    <input type="text" class="input" placeholder="Email">#}
-                {#                    <a href="#" class="btn" style="width: 100%">Заявка на просчет</a>#}
-
-                {#                </div>#}
-
+                    {% for item in list %}
+                        <a href="#" class="{{ _ }}__type">
+                            <div class="{{ _ }}__type-img img img--contain">
+                                <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                            </div>
+                            <div>{{ item }}</div>
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
-            <div class="{{ _ }}__types">
-                {% set  list = [
-                    'САМОСВАЛЫ',
-                    'ТЯГАЧИ',
-                    'Автобетоносмесители',
-                    'Автобусы',
-                    'Катки'] %}
+        </div>
+        <div class="{{ _ }} section">
+            <div class="container">
+                <div class="{{ _ }}__wrap"> 
+                    <div class="{{ _ }}__content">
+                        <h1 class="h1">КИТАЙСКАЯ <br> СПЕЦТЕХНИКА</h1>
+                        <div class="{{ _ }}__list">
 
-                {% for item in list %}
-                    <a href="#" class="{{ _ }}__type">
-                        <div class="{{ _ }}__type-img img img--contain">
-                            <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                            {% set  list = [
+                                'Прямые поставки из Китая',
+                                'Техническая поддержка',
+                                'Лизинг'] %}
+
+                            {% for item in list %}
+                                <div class="{{ _ }}__item">
+                                    <div class="{{ _ }}__item-icon">
+                                        <img src="images/{{ _ }}/{{ loop.index }}.svg" alt=""/>
+                                    </div>
+                                    <div class="{{ _ }}__item-text">
+                                        {{ item }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+
                         </div>
-                        <div>{{ item }}</div>
-                    </a>
-                {% endfor %}
+
+                        <div class="{{ _ }}__buttons">
+                            <a data-fancybox href="#popup--action" class="special-btn">УЗНАТЬ О СКИДКАХ</a>
+                            <a href="#" class="special-btn special-btn--second">ПЕРЕЙТИ В КАТАЛОГ</a>
+
+                        </div>
+
+                    </div>
+                    {#                <div class="{{ _ }}__form">#}
+                    {#                    <h2 class="{{ _ }}__form-title">#}
+                    {#                        Выгодный лизинг#}
+                    {#                    </h2>#}
+                    {#                                        <div class="{{ _ }}__model"> #}
+                    {#                                            <span>Выберите модель</span> #}
+                    {#                                        </div> #}
+
+                    {#                    <input type="text" class="input js--tel" placeholder="Телефон">#}
+                    {#                    <input type="text" class="input" placeholder="Email">#}
+                    {#                    <a href="#" class="btn" style="width: 100%">Заявка на просчет</a>#}
+
+                    {#                </div>#}
+
+                </div>
+                <div class="{{ _ }}__types">
+                    {% set  list = [
+                        'САМОСВАЛЫ',
+                        'ТЯГАЧИ',
+                        'Автобетоносмесители',
+                        'Автобусы',
+                        'Катки'] %}
+
+                    {% for item in list %}
+                        <a href="#" class="{{ _ }}__type">
+                            <div class="{{ _ }}__type-img img img--contain">
+                                <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                            </div>
+                            <div>{{ item }}</div>
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
+
+
+
+
+
     {% set  _ = 'general-information' %}
     <div class="{{ _ }} section">
         <div class="container">

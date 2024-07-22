@@ -20,6 +20,15 @@ $(document).ready(function () {
                 }
             ]
         })
+
+
+        $('.general-slider').slick({
+            arrows: false,
+            infinite: false
+        })
+
+
+
         $('.general-top-slider').slick({
             slidesToShow: 1,
             dots: true,

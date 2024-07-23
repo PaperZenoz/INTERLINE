@@ -24,7 +24,9 @@ $(document).ready(function () {
 
         $('.general-slider').slick({
             arrows: false,
-            infinite: false
+            infinite: false,
+            adaptiveHeight: true,
+            swipe: false 
         })
 
 

@@ -3,7 +3,8 @@
   background-size: cover
   background-repeat: no-repeat
   background-position: center
-  &:nth-child(2) .general-banner__wrap
+  display: block
+  &:nth-child(2) .general-banner__wrap, &:nth-child(2) .general-banner__types
     opacity: 0
     pointer-events: none
 
@@ -29,6 +30,11 @@
         width: 45px
         height: 45px
 
+        
+        
+  &__second
+    display: block
+    aspect-ratio: 1920 / 1047
 
   &__content
     color: $white

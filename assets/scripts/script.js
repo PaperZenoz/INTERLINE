@@ -26,7 +26,7 @@ $(document).ready(function () {
             arrows: false,
             infinite: false,
             adaptiveHeight: true,
-            swipe: false 
+            swipe: false
         })
 
 

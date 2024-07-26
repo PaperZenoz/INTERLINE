@@ -2,9 +2,49 @@
 {% extends "./2.parts/main.njk" %}
 {% block content %}
 
+
+    <style>
+        .general-banner--bg {
+            background-image: url("https://interline.ru/upload/iblock/8f3/vzwt3iqzvfkts0oh6c2k560da0fgj5ue.jpg");
+        }
+
+        @media screen and (max-width: 1023px){
+            .general-banner--bg {
+                background-image: url("https://interline.ru/upload/iblock/ac2/xi7uofjmxvb9si0zrsem4wa4yggyizts.webp");
+            }
+        }
+    </style>
+
     {% set  _ = 'general-slider' %}
     <div class="{{ _ }}">
         {% set  _ = 'general-banner' %}
+        <div class="{{ _ }} {{ _ }}--bg section">
+
+            <div class="container">
+                <div class="{{ _ }}__wrap">
+
+                    <div class="{{ _ }}__types">
+                        {% set  list = [
+                            'САМОСВАЛЫ',
+                            'ТЯГАЧИ',
+                            'Автобетоносмесители',
+                            'Автобусы',
+                            'Катки'] %}
+
+                        {% for item in list %}
+                            <a href="#" class="{{ _ }}__type">
+                                <div class="{{ _ }}__type-img img img--contain">
+                                    <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                                </div>
+                                <div>{{ item }}</div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <a href="#" class="{{ _ }}__ancor"></a>
+            </div>
+
+        </div>
         <div class="{{ _ }} section">
             <div class="container">
                 <div class="{{ _ }}__wrap">
@@ -72,10 +112,10 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="{{ _ }}__second img">
-            <img src="images/catalog/1.jpg" alt=""/>
 
-        </a>
+ 
+
+
     </div>
 
 

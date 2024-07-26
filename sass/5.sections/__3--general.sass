@@ -4,9 +4,20 @@
   background-repeat: no-repeat
   background-position: center
   display: block
-  &:nth-child(2) .general-banner__wrap, &:nth-child(2) .general-banner__types
-    opacity: 0
-    pointer-events: none
+  position: relative 
+  &--bg
+    aspect-ratio: 1920 / 1047
+    display: flex !important
+    align-items: flex-end
+    @media screen and (max-width: 1023px)
+    	aspect-ratio: 1023  / 1023
+
+
+
+
+  //&:nth-child(2) .general-banner__wrap
+  //  opacity: 0
+  //  pointer-events: none
 
   &__wrap
     display: grid
@@ -14,6 +25,7 @@
     grid-gap: 30px
     margin-bottom: 40px
     position: relative
+    z-index: 1
     @media screen and (max-width: 1599px)
       grid-template-columns: 1fr
 
@@ -30,8 +42,16 @@
         width: 45px
         height: 45px
 
-        
-        
+
+  &__ancor
+    position: absolute
+    left: 0px
+    right: 0px
+    bottom: 0px
+    top: 0px
+    //background-color: $black
+
+
   &__second
     display: block
     aspect-ratio: 1920 / 1047
@@ -316,6 +336,7 @@
   &__types-img
     background-color: $red
     display: none
+
     img
       filter: invert(100%)
 
@@ -423,9 +444,10 @@
     height: 28px
     @include r(50%)
     @extend %transition
+
     &:hover
-        .general-category__tooltip-content
-          display: block
+      .general-category__tooltip-content
+        display: block
 
   &__tooltip-content
     background-color: $white

@@ -19,15 +19,15 @@ $(document).ready(function () {
                     }
                 }
             ]
-        })
+        }) 
 
 
-        $('.general-slider').slick({
-            arrows: false,
-            infinite: false,
-            adaptiveHeight: true,
-            swipe: false
-        })
+        // $('.general-slider').slick({
+        //     arrows: false,
+        //     infinite: false,
+        //     adaptiveHeight: true,
+        //     swipe: false
+        // })
 
 
 

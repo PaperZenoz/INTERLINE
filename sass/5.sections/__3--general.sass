@@ -1,23 +1,16 @@
 .general-banner
-  //background-image: url("../../images/general-banner/bg.jpg")
   background-size: cover
   background-repeat: no-repeat
   background-position: center
   display: block
-  position: relative 
+  position: relative  
   &--bg
-    aspect-ratio: 1920 / 1047
+    min-height: 1062px
     display: flex !important
     align-items: flex-end
     @media screen and (max-width: 1023px)
-    	aspect-ratio: 1023  / 1023
+    	min-height: 1023px
 
-
-
-
-  //&:nth-child(2) .general-banner__wrap
-  //  opacity: 0
-  //  pointer-events: none
 
   &__wrap
     display: grid
